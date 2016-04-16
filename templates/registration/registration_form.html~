@@ -32,68 +32,37 @@
 
 <!-- Text input--><br><br><br><br>
 <form class="form-horizontal" role="form" method="post" action="">
-                               {% csrf_token %}
-				{{form.errors}}         
+                               {% csrf_token %}    
+			{% if form.errors %}
+			{{form.errors}}
+			 {% endif %}    
 <fieldset>
 
 <!-- Form Name -->
 
 <!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="textinput">Email</label>  
-  <div class="col-md-4">
-  <input id="id_email" name="email" type="email" placeholder="" class="form-control input-md">
-    
-  </div>
-</div>
+<form role="form" method="post" action="/login">{% csrf_token %}
+                            <br/>
+                            <div class="form-group input-group">
+                                <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
+                                <input type="text" class="form-control" placeholder="User name" {{ form.username }}
+                            </div>
+                             <div class="form-group input-group">
+                                <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
+                                <input type="email" class="form-control" placeholder="Enter Email" {{ form.email }}
+                            </div>
+                             <div class="form-group input-group">
+                                <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
+                                <input type="password" class="form-control" placeholder="Enter Password" {{ form.password1 }}
+                            </div>
 
-<div class="form-group">
-  <label class="col-md-4 control-label" for="textinput">Name</label>  
-  <div class="col-md-4">
-  <input id="id_name" name="name" type="text" placeholder="" class="form-control input-md">
-    
-  </div>
-</div>
-
-
-
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="textinput">Phone</label>  
-  <div class="col-md-4">
-  <input id="id_phone" name="phone" type="text" placeholder="" class="form-control input-md">
-    
-  </div>
-</div>
-
-
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="textinput">Password</label>  
-  <div class="col-md-4">
-  <input id="id_password1" name="password1" type="password" placeholder="" class="form-control input-md">
-    
-  </div>
-</div>
-
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="textinput">Type Password Again</label>  
-  <div class="col-md-4">
-  <input id="id_password2" name="password2" type="password" placeholder="" class="form-control input-md">
-    
-  </div>
-</div>
-
-
-<!-- Button -->
-  <div class="form-group">
-  <label class="col-md-4 control-label" for="singlebutton"></label>
-  <div class="col-md-4">
-    <button id="singlebutton" name="singlebutton" class="btn btn-primary">Submit</button>
-  </div>
-</div>
-</fieldset>
-</form>
+                            <div class="form-group input-group">
+                                <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
+                                <input type="password" class="form-control" placeholder="Retype Password"  {{ form.password2 }}
+                            </div>
+                            <div align="right">
+                                <input type="submit" value="Register Me" class="btn btn-success " style="border-color:#2e6da4;background-color: #2e6da4;"/>
+                            </div>
+                        </form>
 </body>
 </html>
