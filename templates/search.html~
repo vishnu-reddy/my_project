@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Compass - Shipping</title>
+	<link href='http://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="/static/css-com/bootstrap.css">
+	<link rel="stylesheet" href="/static/css-com/font-awesome.css">
+	<link rel="stylesheet" href="/static/css-com/main.css">
+	<link rel="stylesheet" href="/static/css-com/jquery.bxslider.css">
+	</head>
+	<body>
+	<div class="hero-unit">
+    
+      {% if track %}
+    <h2> Tracking  </h2>
+    
+        
+    
+     <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Reference_no </th>
+        <th>From_location </th>
+            <th>To_location </th>
+	<th>type</th>
+	<th>Date</th>
+	<th>Status</th>		
+	
+	
+       
+      </tr>
+    </thead>
+    <tbody>
+     
+	 
+    
+	 
+	 {% for t in track %}
+		<tr> 
+
+        <td style="color:white"> <b>{{ t.reference_no}} </b></td>
+          <td style="color:white"> {{ t.from_location}} </td>
+   <td style="color:white"> {{ t.to_location}} </td>
+	<td style="color:white"> <b>{{ t.type}} </b></td>
+	<td style="color:white"> <b>{{ t.date}} </b></td>
+	<td style="color:white"> <b>{{ t.status}} </b></td>
+      </tr>
+	
+{% endfor %}
+	 	
+	 
+    </tbody>
+  </table>
+   {% else %}
+                    
+    <h2> No results for keyword : {{ status }}  </h2>
+            {% endif %}
+            
+            
+</div>
+</body>
+</html>

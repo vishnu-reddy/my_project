@@ -12,6 +12,7 @@ from datetime import datetime
 from django.template.loader import render_to_string
 from django.template import RequestContext
 from django.contrib.auth import authenticate, login
+from django.db.models import Q
 
 @csrf_protect
 def register(request):
@@ -75,3 +76,13 @@ def index(request):
 def login(request):
     return render(request, 'registration/login.html', {})
 
+def search(request):
+    context = RequestContext(request)
+    if 'q' in request.GET and request.GET['q']:
+        q = request.GET['q']
+    print q
+    
+    track = Track.objects.filter(Q(id__icontains = q) | Q(reference_no__contains=q))
+    for i in track:
+        print "hii"
+    return render_to_response('search.html', {'track': track}, context)
