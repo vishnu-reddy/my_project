@@ -45,7 +45,7 @@
 <!-- Form Name -->
 
 <!-- Text input-->
-<form role="form" method="post" action="/login">{% csrf_token %}
+<form role="form" method="post" action="/login/" style=" align-content: center; margin: 101px -201px 7px 443px; ">{% csrf_token %}
                             <br/>
                             <div class="form-group input-group">
                                 <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
@@ -64,8 +64,12 @@
                                 <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
                                 <input type="password" class="form-control" placeholder="Retype Password"  {{ form.password2 }}
                             </div>
-                            <div align="right">
-                                <input type="submit" value="Register Me" class="btn btn-success " style="border-color:#2e6da4;background-color: #2e6da4;"/>
+                            <div class="form-group">
+		  <label class="col-md-4 control-label" for="singlebutton"></label>
+		  <div class="col-md-4">
+			<button type=submit id="singlebutton" name="singlebutton" class="btn btn-primary">Submit</button>
+		  </div>
+		</div>
                             </div>
                         </form>
 </body>

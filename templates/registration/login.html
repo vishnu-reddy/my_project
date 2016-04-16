@@ -23,7 +23,7 @@
 					<ul class="nav navbar-nav navbar-right animate">
 						<li><a href="/">Home</a></li>
 						<li><a href="/login/">login</a></li>
-						<li><a href="/register">Register</a></li>
+						<li><a href="/register/">register</a></li>
 					</ul>
 				</div>
 				<!--/.nav-collapse -->
@@ -36,7 +36,7 @@
 					 {% if form.errors %}
                             Your username and password didn't match.Please try again.
                         {% endif %}
-                        <form role="form" method="post" action=".">{% csrf_token %}
+                        <form role="form" method="post" action="." style=" align-content: center; margin: 101px -201px 7px 443px; ">{% csrf_token %}
                             <br/>
                             <div class="form-group input-group">
                                 <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
@@ -50,8 +50,8 @@
                             <div class="form-group">
 		  <label class="col-md-4 control-label" for="singlebutton"></label>
 		  <div class="col-md-4">
-			
 			<button type=submit id="singlebutton" name="singlebutton" class="btn btn-primary">Submit</button>
+			
 		  </div>
 
 		</div>

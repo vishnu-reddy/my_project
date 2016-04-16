@@ -10,6 +10,10 @@
 	<link rel="stylesheet" href="/static/css-com/font-awesome.css">
 	<link rel="stylesheet" href="/static/css-com/main.css">
 	<link rel="stylesheet" href="/static/css-com/jquery.bxslider.css">
+	
+    <script type="text/javascript">
+        document.getElementById('id_username').focus()
+    </script>
 	</head>
 	<body>
 
@@ -41,7 +45,7 @@
 <!-- Form Name -->
 
 <!-- Text input-->
-<form role="form" method="post" action="/login">{% csrf_token %}
+<form role="form" method="post" action="/login"  style=" align-content: center; margin: 101px -201px 7px 443px;>{% csrf_token %}
                             <br/>
                             <div class="form-group input-group">
                                 <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
