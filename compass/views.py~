@@ -41,18 +41,19 @@ def logout_page(request):
     return HttpResponseRedirect('/')
 
 def enquiry(request):
-    context = RequestContext(request)	
+    context = RequestContext(request)
+    enquiry_form = EnquiryForm(data=request.POST)
+    message_form = MessageForm(data=request.POST)
     if request.method == "POST":
-        enquiry_form = EnquiryForm(data=request.POST)
-        if enquiry_form.is_valid():
+        if "singlebutton" in request.POST and enquiry_form.is_valid():
             enquiry = enquiry_form.save()
 	    
-        else:
-            print enquiry_form
+        if "message" in request.POST and message_form.is_valid():
+            message = message_form.save()
     else:
         enquiry_form = EnquiryForm()
     return render_to_response('index.html',
-     {'enquiry_form': enquiry_form}, context)
+     {'enquiry_form': enquiry_form, 'message_form':message_form}, context)
 
 def message(request):
     context = RequestContext(request)

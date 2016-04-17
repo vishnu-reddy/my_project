@@ -34,6 +34,9 @@
 	
 	
   }
+input[type=text]:focus {
+    width: 100%;
+}
   </style>
 </head>
 <body>
@@ -52,24 +55,25 @@
 			<div class="container">
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><i class="fa fa-bars"></i></button>
-					<a class="navbar-brand animate" href="#"><img src="static/img-com/logo6.png" alt="logo1"></a>
+					<a class="navbar-brand animate" href="#"><img src="static/img-com/logo5.png" alt="logo1"></a>
 				</div>
 				<div class="navbar-collapse collapse">
 				
 					<ul class="nav navbar-nav navbar-right animate">
 						
+						<li>
+						<form method="get" action="/search/">
+						<input class="form-control" type="text" placeholder="Enter Tracking ID" name="q"></input>
+						</form>
+						</li>
 						<li><a href="#home">Home</a></li>
 						<li><a href="#about">About Us</a></li>
 						<li><a href="#services">Services</a></li>
 						<li><a href="#careers">Careers</a></li>
 						<li><a href="#enquiry">Enquiry</a></li>
 						<li><a href="#contact">Contact</a></li>
-						<li><a href="login">Login</a></li>&nbsp;&nbsp;
-						<li>
-						<form method="get" action="/search/">
-						<input class="form-control" type="text" placeholder="Enter Tracking ID" name="q"></input>
-						</form>
-						</li>
+						<li><a href="login">Login</a></li>
+						
 
 						</ul>
 				</div>
@@ -91,7 +95,7 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
       <div class="item active">
-        <img src="static/img-com/333.jpg" alt="Chania" width="460" height="345">
+        <img src="static/img-com/334.jpg" alt="Chania" width="460" height="345">
       </div>
 
       <div class="item">
@@ -99,7 +103,7 @@
       </div>
     
       <div class="item">
-        <img src="static/img-com/222.jpg" alt="Flower" width="460" height="345">
+        <img src="static/img-com/253.jpg" alt="Flower" width="460" height="345">
       </div>
       </div>
 	   </div>
@@ -610,8 +614,11 @@ Compass Shipping Company has a dedicated Customs Clearance and documentation div
 							<h1 class="light-font">Send us a message</h1>
 							
 						</div>
-						<form class="form-horizontal" method="post">
-							{% csrf_token %}
+						<form class="form-signin span6 form-horizontal" method="post"
+ enctype="multipart/form-data">
+                    {% csrf_token %}
+                   
+
 							<div class="form-group">
 								<div class="col-sm-4" style="position:relative">
 									<input type="text" name="Name" data-new-placeholder="What is your name?" class="form-control label_better" placeholder="Name">
@@ -629,7 +636,7 @@ Compass Shipping Company has a dedicated Customs Clearance and documentation div
 								</div>
 							</div>
 							<div class="form-group commands">
-								<button class="btn btn-primary">Send message</button>
+								<button type="submit" name="message" class="btn btn-primary">Send message</button>
 							</div>
 						</form>
 					</div>

@@ -49,10 +49,10 @@ class EnquiryAdmin(admin.ModelAdmin):
 
 
 class Message(models.Model):
-    name = models.CharField(max_length=40)
-    email = models.CharField(max_length=40)
-    phone = models.IntegerField()
-    comment = models.TextField()
+    name = models.CharField(max_length=40, null=True, blank=True)
+    email = models.CharField(max_length=40, null=True, blank=True)
+    phone = models.IntegerField(null=True, blank=True)
+    comment = models.TextField(null=True, blank=True)
 
 
 class Track(models.Model):

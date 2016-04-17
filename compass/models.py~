@@ -40,7 +40,7 @@ class Enquiry(models.Model):
     email = models.CharField(max_length=50)
     city = models.CharField(max_length=50)
     country = models.CharField(max_length=40, choices=country_choices)
-    enquiry = models.CharField(null=True, blank=True)
+    enquiry = models.CharField(max_length=255, null=True, blank=True)
     def __unicode__(self):
         return self.full_name
 

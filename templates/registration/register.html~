@@ -35,7 +35,7 @@
 		</div>
 
 <!-- Text input--><br><br><br><br>
-<form class="form-horizontal" role="form" method="post" action="">
+<form class="form-horizontal" role="form" method="post" action="" style=" align-content: center; margin: 101px -201px 7px 443px;>
                                {% csrf_token %}    
 			{% if form.errors %}
 			{{form.errors}}
@@ -67,7 +67,7 @@
                             <div class="form-group">
 		  <label class="col-md-4 control-label" for="singlebutton"></label>
 		  <div class="col-md-4">
-			<button type=submit id="singlebutton" name="singlebutton" class="btn btn-primary">Submit</button>
+			<button type=submit id="singlebutton" name="singlebutton" class="btn btn-primary" style="margin: -250px;">Submit</button>
 		  </div>
 		</div>
                             </div>

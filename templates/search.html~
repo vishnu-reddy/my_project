@@ -56,7 +56,7 @@
   </table>
    {% else %}
                     
-    <h2> No Results Found On This Keyword  </h2>
+    <h2> No results for keyword : {{ status }}  </h2>
             {% endif %}
             
             
