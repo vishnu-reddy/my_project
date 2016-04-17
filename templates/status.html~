@@ -46,6 +46,7 @@
         <th style="color:black">From Location </th>
             <th style="color:black">To Location </th>
 	<th style="color:black">Status</th>
+	<th style="color:black">No Of Pieces</th>
 	
        
       </tr>
@@ -59,6 +60,7 @@
    <td style="color:black"> <b>{{ i.current_to_location}}</b> </td>
 	
 	<td style="color:black"> <b>{{ i.status}} </b></td>
+	<td style="color:black"> <b>{{ i.no_of_pieces}} </b></td>
 </tr>
 	{% endfor %}
 	 	

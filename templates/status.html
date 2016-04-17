@@ -37,16 +37,16 @@
 <br><br><br><br><br>
 	<div class="hero-unit">
 	
-    <h2 style="color:black"> Tracking Details  </h2>
+    <h2> Tracking Details  </h2>
  
      <table class="table table-bordered">
     <thead>
       <tr>
-	<th style="color:black">Date</th>
-        <th style="color:black">From Location </th>
-            <th style="color:black">To Location </th>
-	<th style="color:black">Status</th>
-	<th style="color:black">No Of Pieces</th>
+	<th>Date</th>
+        <th>From Location </th>
+            <th>To Location </th>
+	<th>Status</th>
+	<th>No Of Pieces</th>
 	
        
       </tr>
@@ -55,12 +55,12 @@
      	     {% for i in status %}
 	 
 		<tr> 
-		<td style="color:black"> <b>{{ i.currernt_date}} </b></td>
-	          <td style="color:black"> <b>{{ i.current_from_location}}</b> </td>
-   <td style="color:black"> <b>{{ i.current_to_location}}</b> </td>
+		<td> <b>{{ i.currernt_date}} </b></td>
+	          <td> <b>{{ i.current_from_location}}</b> </td>
+   <td> <b>{{ i.current_to_location}}</b> </td>
 	
-	<td style="color:black"> <b>{{ i.status}} </b></td>
-	<td style="color:black"> <b>{{ i.no_of_pieces}} </b></td>
+	<td> <b>{{ i.status}} </b></td>
+	<td> <b>{{ i.no_of_pieces}} </b></td>
 </tr>
 	{% endfor %}
 	 	

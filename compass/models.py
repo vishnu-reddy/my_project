@@ -90,5 +90,4 @@ class CurrentStatus(models.Model):
     current_to_location = models.CharField(max_length=100)
     status = models.CharField(max_length=40, choices=track_choices)
     def __unicode__(self):
-	
-        return self.reference_no
+	return self.status
