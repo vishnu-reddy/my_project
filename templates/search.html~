@@ -39,20 +39,20 @@
 	
     
       {% if track %}
-    <h2 style="color:black"> Tracking Details  </h2>
+    <h2> Tracking Details  </h2>
     
         
     
      <table class="table table-bordered">
     <thead>
       <tr>
-        <th style="color:black">Reference Number </th>
-        <th style="color:black">From Location </th>
-            <th style="color:black">To Location </th>
-	<th style="color:black">Type</th>
-	<th style="color:black">Date</th>
-	<th style="color:black">Status</th>
-	<th style="color:black">No Of Pieces</th>		
+        <th>Reference Number </th>
+        <th>From Location </th>
+            <th>To Location </th>
+	<th>Type</th>
+	<th>Date</th>
+	<th>Status</th>
+	<th>No Of Pieces</th>		
 	
 	
        
@@ -66,13 +66,13 @@
 	 {% for t in track %}
 		<tr> 
 
-        <td style="color:black"> <b><a href="{{t.reference_no}}">{{ t.reference_no}}</a> </b></td>
-          <td style="color:black"> <b>{{ t.from_location}}</b> </td>
-   <td style="color:black"> <b>{{ t.to_location}}</b> </td>
-	<td style="color:black"> <b>{{ t.type}} </b></td>
-	<td style="color:black"> <b>{{ t.date}} </b></td>
-	<td style="color:black"> <b>{{ t.status}} </b></td>
-      	<td style="color:black"> <b>{{ t.no_of_pieces}} </b></td>
+        <td> <b><a href="{{t.reference_no}}">{{ t.reference_no}}</a> </b></td>
+          <td> <b>{{ t.from_location}}</b> </td>
+   <td> <b>{{ t.to_location}}</b> </td>
+	<td> <b>{{ t.type}} </b></td>
+	<td> <b>{{ t.date}} </b></td>
+	<td> <b>{{ t.status}} </b></td>
+      	<td> <b>{{ t.no_of_pieces}} </b></td>
 </tr>
 	
 {% endfor %}

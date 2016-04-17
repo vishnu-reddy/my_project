@@ -37,7 +37,41 @@
 <br><br><br><br><br>
 	<div class="hero-unit">
 	
-    <h2> Tracking Details  </h2>
+    <h2> Locate Your Shipment  </h2>
+    
+     <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Reference Number </th>
+        <th>From Location </th>
+            <th>To Location </th>
+	<th>Type</th>
+	<th>Date</th>
+	<th>Status</th>
+	<th>No Of Pieces</th>		
+	
+	
+       
+      </tr>
+    </thead>
+    <tbody>
+     
+	 
+    
+	 
+	 {% for t in track %}
+		<tr> 
+
+        <td> <b><a href="{{t.reference_no}}">{{ t.reference_no}}</a> </b></td>
+          <td> <b>{{ t.from_location}}</b> </td>
+   <td> <b>{{ t.to_location}}</b> </td>
+	<td> <b>{{ t.type}} </b></td>
+	<td> <b>{{ t.date}} </b></td>
+	<td> <b>{{ t.status}} </b></td>
+      	<td> <b>{{ t.no_of_pieces}} </b></td>
+</tr>
+	
+{% endfor %}
  
      <table class="table table-bordered">
     <thead>
