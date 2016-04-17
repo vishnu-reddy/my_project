@@ -89,7 +89,6 @@ class CurrentStatus(models.Model):
     current_from_location = models.CharField(max_length=100)
     current_to_location = models.CharField(max_length=100)
     status = models.CharField(max_length=40, choices=track_choices)
-    no_of_pieces = models.IntegerField(null=True, blank=True)
     def __unicode__(self):
 	
         return self.reference_no
