@@ -55,25 +55,26 @@ input[type=text]:focus {
 			<div class="container">
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><i class="fa fa-bars"></i></button>
-					<a class="navbar-brand animate" href="#"><img src="static/img-com/logo5.png" alt="logo1"></a>
+					<a class="navbar" href="#"><img src="static/img-com/compass-logo.png" alt="logo1"></a>
 				</div>
+<br>
 				<div class="navbar-collapse collapse">
 				
 					<ul class="nav navbar-nav navbar-right animate">
 						
-						<li>
-						<form method="get" action="/search/">
-						<input class="form-control" type="text" placeholder="Enter Tracking ID" name="q"></input>
-						</form>
-						</li>
+						
 						<li><a href="#home">Home</a></li>
 						<li><a href="#about">About Us</a></li>
 						<li><a href="#services">Services</a></li>
 						<li><a href="#careers">Careers</a></li>
 						<li><a href="#enquiry">Enquiry</a></li>
 						<li><a href="#contact">Contact</a></li>
-						<li><a href="login">Login</a></li>
-						
+						<li><a href="login">Login &nbsp;&nbsp;</a></li>
+						<li>
+						<form method="get" action="/search/">
+						<input class="form-control" type="text" placeholder="Enter Tracking ID" name="q"></input>
+						</form>
+						</li>
 
 						</ul>
 				</div>
@@ -172,7 +173,7 @@ We achieve consistent results in providing optimum solutions as per customer’s
 						</div>
 					</div>
 				</div>
-			</div><br><br><br><br>
+			</div>
 		<section id="services" class="gray">
 			
 				<div class="section">
@@ -466,7 +467,7 @@ Compass Shipping Company has a dedicated Customs Clearance and documentation div
 
 <!-- Select Basic -->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="selectbasic">Services*</label>
+  <label class="col-md-4 control-label" for="selectbasic" style= "color:black">Services*</label>
   <div class="col-md-4">
     <select id="id_services" name="services" class="form-control" required>
       <option value="Please select a service required">Please select a service required</option>
@@ -483,7 +484,7 @@ Compass Shipping Company has a dedicated Customs Clearance and documentation div
 
 <!-- Text input-->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="textinput">Full Name*</label>  
+  <label class="col-md-4 control-label" for="textinput" style= "color:black">Full Name*</label>  
   <div class="col-md-4">
   <input id="id_full_name" name="full_name" type="text"  class="form-control input-md" required>
     
@@ -492,7 +493,7 @@ Compass Shipping Company has a dedicated Customs Clearance and documentation div
 
 <!-- Text input-->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="textinput">Organization*</label>  
+  <label class="col-md-4 control-label" for="textinput" style= "color:black">Organization*</label>  
   <div class="col-md-4">
   <input id="id_organisation" name="organisation" type="text"  class="form-control input-md" required>
     
@@ -501,7 +502,7 @@ Compass Shipping Company has a dedicated Customs Clearance and documentation div
 
 <!-- Text input-->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="textinput">Designation*</label>  
+  <label class="col-md-4 control-label" for="textinput" style= "color:black">Designation*</label>  
   <div class="col-md-4">
   <input id="id_designation" name="designation" type="text"  class="form-control input-md" required>
     
@@ -510,7 +511,7 @@ Compass Shipping Company has a dedicated Customs Clearance and documentation div
 
 <!-- Text input-->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="textinput">Contact Number*</label>  
+  <label class="col-md-4 control-label" for="textinput" style= "color:black">Contact Number*</label>  
   <div class="col-md-4">
   <input id="id_contact_number" name="contact_number" type="text"  class="form-control input-md" required>
     
@@ -519,7 +520,7 @@ Compass Shipping Company has a dedicated Customs Clearance and documentation div
 
 <!-- Text input-->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="textinput">E-mail*</label>  
+  <label class="col-md-4 control-label" for="textinput" style= "color:black">E-mail*</label>  
   <div class="col-md-4">
   <input id="id_email" name="email" type="text"  class="form-control input-md" required>
     
@@ -528,7 +529,7 @@ Compass Shipping Company has a dedicated Customs Clearance and documentation div
 
 <!-- Text input-->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="textinput">City*</label>  
+  <label class="col-md-4 control-label" for="textinput" style= "color:black">City*</label>  
   <div class="col-md-4">
   <input id="id_city" name="city" type="text"  class="form-control input-md" required>
     
@@ -539,7 +540,7 @@ Compass Shipping Company has a dedicated Customs Clearance and documentation div
 
 <!-- Select Basic -->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="selectbasic">Country*</label>
+  <label class="col-md-4 control-label" for="selectbasic" style= "color:black">Country*</label>
   <div class="col-md-4">
     <select id="id_country" name="country" class="form-control">
       <option value="Please select a country">Please select a country</option>
@@ -555,7 +556,7 @@ Compass Shipping Company has a dedicated Customs Clearance and documentation div
 
 <!-- Textarea -->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="textarea">Enquiry</label>
+  <label class="col-md-4 control-label" for="textarea" style= "color:black">Enquiry</label>
   <div class="col-md-4">                     
     <textarea class="form-control" id="id_enquiry" name="enquiry" type="text"></textarea>
   </div>
@@ -620,19 +621,21 @@ Compass Shipping Company has a dedicated Customs Clearance and documentation div
                    
 
 							<div class="form-group">
-								<div class="col-sm-4" style="position:relative">
-									<input type="text" name="Name" data-new-placeholder="What is your name?" class="form-control label_better" placeholder="Name">
+								<div class="col-sm-4">
+									<input id="id_name" name="name" type="text"  class="form-control label_better" placeholder="What's Your name..">
+				
 								</div>
 								<div class="col-sm-4">
-									<input type="text" name="Email" class="form-control label_better" placeholder="Email">
+									<input id="id_email" name="email" type="text"  class="form-control label_better" placeholder="Email..">
 								</div>
 								<div class="col-sm-4">
-									<input type="text" name="Phone" class="form-control label_better" placeholder="Phone">
+									<input id="id_phone" name="phone" type="text"  class="form-control label_better" placeholder="Phone..">
 								</div>
 							</div>
 							<div class="form-group">
 								<div class="col-sm-12">
-									<textarea class="form-control label_better" placeholder="Your comment.." rows="7"></textarea>
+									<textarea class="form-control label_better" id="id_comment" name="comment" type="text" placeholder="Your comment.." rows="7"></textarea>
+						
 								</div>
 							</div>
 							<div class="form-group commands">
@@ -646,7 +649,7 @@ Compass Shipping Company has a dedicated Customs Clearance and documentation div
 		</section>
 		<footer>
 			<div class="container">
-				<p>&copy; Copyright <a href="http://compass-ship.com/k">compass-ship.com</a> © 2016 - Compass Shipping Services L.L.C</p>
+				<p style="color:white">&copy; Copyright <a href="http://compass-ship.com/k">compass-ship.com</a> © 2016 - Compass Shipping Services L.L.C</p>
 				<ul class="social-list">
 					<li class="facebook">
 						<a href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook"></i></a>

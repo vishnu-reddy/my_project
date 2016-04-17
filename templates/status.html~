@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Compass - Shipping</title>
+	<link href='http://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="/static/css-com/bootstrap.css">
+	<link rel="stylesheet" href="/static/css-com/font-awesome.css">
+	<link rel="stylesheet" href="/static/css-com/main.css">
+	<link rel="stylesheet" href="/static/css-com/jquery.bxslider.css">
+	</head>
+	<body>
+<!-- Fixed navbar -->
+		<div class="navbar navbar-smak navbar-fixed-top " id="navbar" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><i class="fa fa-bars"></i></button>
+					<a class="navbar-brand animate" href="/"><img src="/static/img-com/compass-logo.png" alt="logo1"></a>
+				</div>
+				<div class="navbar-collapse collapse">
+				
+					<ul class="nav navbar-nav navbar-right animate">
+						
+						<li>
+						<form method="get" action="/search/">
+						<input class="form-control" type="text" placeholder="Enter Tracking ID" name="q"></input>
+						</form>
+						</li>
+						<li><a href="/">Home</a></li>	
+						</ul>
+				</div>
+				<!--/.nav-collapse -->
+			</div>
+		</div>
+<br><br><br><br><br>
+	<div class="hero-unit">
+	
+    <h2 style="color:black"> Tracking Details  </h2>
+ 
+     <table class="table table-bordered">
+    <thead>
+      <tr>
+	<th style="color:black">Date</th>
+        <th style="color:black">From Location </th>
+            <th style="color:black">To Location </th>
+	<th style="color:black">Status</th>
+	
+       
+      </tr>
+    </thead>
+    <tbody>
+     	     {% for i in status %}
+	 
+		<tr> 
+		<td style="color:black"> <b>{{ i.currernt_date}} </b></td>
+	          <td style="color:black"> <b>{{ i.current_from_location}}</b> </td>
+   <td style="color:black"> <b>{{ i.current_to_location}}</b> </td>
+	
+	<td style="color:black"> <b>{{ i.status}} </b></td>
+</tr>
+	{% endfor %}
+	 	
+	 
+    </tbody>
+  </table>
+           
+            
+</div>
+</body>
+</html>

@@ -12,22 +12,47 @@
 	<link rel="stylesheet" href="/static/css-com/jquery.bxslider.css">
 	</head>
 	<body>
+<!-- Fixed navbar -->
+		<div class="navbar navbar-smak navbar-fixed-top " id="navbar" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><i class="fa fa-bars"></i></button>
+					<a class="navbar-brand animate" href="/"><img src="/static/img-com/compass-logo.png"  alt="logo1"></a>
+				</div>
+				<div class="navbar-collapse collapse">
+				 
+					<ul class="nav navbar-nav navbar-right animate">
+						
+						<li>
+						<form method="get" action="/search/">
+						<input class="form-control" type="text" placeholder="Enter Tracking ID" name="q"></input>
+						</form>
+						</li>
+						<li><a href="/">Home</a></li>	
+						</ul>
+				</div>
+				<!--/.nav-collapse -->
+			</div>
+		</div>
+<br><br><br><br><br>
 	<div class="hero-unit">
+	
     
       {% if track %}
-    <h2> Tracking Details  </h2>
+    <h2 style="color:black"> Tracking Details  </h2>
     
         
     
      <table class="table table-bordered">
     <thead>
       <tr>
-        <th>Reference_no </th>
-        <th>From_location </th>
-            <th>To_location </th>
-	<th>type</th>
-	<th>Date</th>
-	<th>Status</th>		
+        <th style="color:black">Reference_no </th>
+        <th style="color:black">From_location </th>
+            <th style="color:black">To_location </th>
+	<th style="color:black">type</th>
+	<th style="color:black">Date</th>
+	<th style="color:black">Status</th>
+	<th style="color:black">no_of_pieces</th>		
 	
 	
        
@@ -41,13 +66,14 @@
 	 {% for t in track %}
 		<tr> 
 
-        <td style="color:white"> <b>{{ t.reference_no}} </b></td>
-          <td style="color:white"> {{ t.from_location}} </td>
-   <td style="color:white"> {{ t.to_location}} </td>
-	<td style="color:white"> <b>{{ t.type}} </b></td>
-	<td style="color:white"> <b>{{ t.date}} </b></td>
-	<td style="color:white"> <b>{{ t.status}} </b></td>
-      </tr>
+        <td style="color:black"> <b><a href="{{t.reference_no}}">{{ t.reference_no}}</a> </b></td>
+          <td style="color:black"> <b>{{ t.from_location}}</b> </td>
+   <td style="color:black"> <b>{{ t.to_location}}</b> </td>
+	<td style="color:black"> <b>{{ t.type}} </b></td>
+	<td style="color:black"> <b>{{ t.date}} </b></td>
+	<td style="color:black"> <b>{{ t.status}} </b></td>
+      	<td style="color:black"> <b>{{ t.no_of_pieces}} </b></td>
+</tr>
 	
 {% endfor %}
 	 	
@@ -56,7 +82,7 @@
   </table>
    {% else %}
                     
-    <h2> No results for keyword : {{ status }}  </h2>
+    <h2> No Results Found On This Keyword  </h2>
             {% endif %}
             
             

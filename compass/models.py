@@ -54,7 +54,6 @@ class Message(models.Model):
     phone = models.IntegerField(null=True, blank=True)
     comment = models.TextField(null=True, blank=True)
 
-
 class Track(models.Model):
 	
    dispatched = "Dispatched"
@@ -71,5 +70,26 @@ class Track(models.Model):
    type = models.CharField(max_length=40)
    date = models.DateField()
    status = models.CharField(max_length=40, choices=track_choices)
+   no_of_pieces = models.IntegerField(null=True, blank=True)
    def __unicode__(self):
+	
+        return self.reference_no
+class CurrentStatus(models.Model):
+    dispatched = "Dispatched"
+    pending = "Pending"
+    out_of_delivery = "Out of Delivery"
+    delivered = "Delivered"
+    track_choices=((dispatched, "Dispatched"),
+		(pending, "Pending"),
+		(out_of_delivery,"Out of Delivery"),
+		(delivered, "Delivered"))
+
+    reference_no = models.ForeignKey(Track)
+    currernt_date = models.DateField()
+    current_from_location = models.CharField(max_length=100)
+    current_to_location = models.CharField(max_length=100)
+    status = models.CharField(max_length=40, choices=track_choices)
+    no_of_pieces = models.IntegerField(null=True, blank=True)
+    def __unicode__(self):
+	
         return self.reference_no

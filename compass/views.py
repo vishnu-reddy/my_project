@@ -68,7 +68,15 @@ def search(request):
         q = request.GET['q']
     print q
     
-    track = Track.objects.filter(Q(id__icontains = q) | Q(reference_no__contains=q))
+    track = Track.objects.filter(Q(reference_no__iexact = q) | Q(status__iexact=q))
     for i in track:
         print "hii"
     return render_to_response('search.html', {'track': track}, context)
+
+
+def status(request, reference_no):
+    refer = Track.objects.get(reference_no=reference_no)
+    status = CurrentStatus.objects.filter(reference_no=refer)
+    template_name = 'status.html'
+    context_dict = {'status': status}
+    return render(request, template_name, context_dict)

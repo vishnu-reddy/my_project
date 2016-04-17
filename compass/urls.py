@@ -8,4 +8,5 @@ urlpatterns = patterns('',
     url(r'^register/$', views.register),
     url(r'^register/success/$', views.register_success),
     url(r'^search/$', views.search, name='search'),
+    url(r'^search/(?P<reference_no>\S+)/$', views.status),
 )

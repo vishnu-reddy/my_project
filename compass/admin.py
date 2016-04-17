@@ -4,3 +4,4 @@ from .models import *
 
 admin.site.register(Enquiry, EnquiryAdmin)
 admin.site.register(Track)
+admin.site.register(CurrentStatus)
