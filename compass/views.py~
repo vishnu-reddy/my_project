@@ -75,9 +75,9 @@ def search(request):
 
 
 def status(request, reference_no):   
-    refer = Track.objects.get(reference_no=reference_no)
-    status = CurrentStatus.objects.filter(reference_no=refer)    
+    t = Track.objects.get(reference_no=reference_no)
+    status = CurrentStatus.objects.filter(reference_no=t)    
     template_name = 'status.html'
-    context_dict = {'status': status}
+    context_dict = {'status': status, 't':t}
     return render(request, template_name, context_dict)
 

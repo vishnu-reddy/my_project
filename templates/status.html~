@@ -34,10 +34,10 @@
 				<!--/.nav-collapse -->
 			</div>
 		</div>
-<br><br><br><br><br>
+<br><br><br><br><br><br><br>
 	<div class="hero-unit">
 	
-    <h2> Tracking Details  </h2>
+    <h2> Locate Your Shipment  </h2>
     
      <table class="table table-bordered">
     <thead>
@@ -48,7 +48,7 @@
 	<th>Type</th>
 	<th>Date</th>
 	<th>Status</th>
-	<th>No Of Pieces</th>		
+	<th>No Of Items</th>		
 	
 	
        
@@ -59,10 +59,10 @@
 	 
     
 	 
-	 {% for t in track %}
+	
 		<tr> 
 
-        <td> <b><a href="{{t.reference_no}}">{{ t.reference_no}}</a> </b></td>
+        <td> <b>{{ t.reference_no}} </b></td>
           <td> <b>{{ t.from_location}}</b> </td>
    <td> <b>{{ t.to_location}}</b> </td>
 	<td> <b>{{ t.type}} </b></td>
@@ -70,9 +70,10 @@
 	<td> <b>{{ t.status}} </b></td>
       	<td> <b>{{ t.no_of_pieces}} </b></td>
 </tr>
-	
-{% endfor %}
- 
+	</tbody>
+  </table>
+
+  <h3> Details  </h3>
      <table class="table table-bordered">
     <thead>
       <tr>
@@ -80,7 +81,6 @@
         <th>From Location </th>
             <th>To Location </th>
 	<th>Status</th>
-	<th>No Of Pieces</th>
 	
        
       </tr>
@@ -94,7 +94,6 @@
    <td> <b>{{ i.current_to_location}}</b> </td>
 	
 	<td> <b>{{ i.status}} </b></td>
-	<td> <b>{{ i.no_of_pieces}} </b></td>
 </tr>
 	{% endfor %}
 	 	
