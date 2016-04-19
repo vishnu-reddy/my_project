@@ -42,18 +42,31 @@ def logout_page(request):
 
 def enquiry(request):
     context = RequestContext(request)
-    enquiry_form = EnquiryForm(data=request.POST)
-    message_form = MessageForm(data=request.POST)
     if request.method == "POST":
-        if "singlebutton" in request.POST and enquiry_form.is_valid():
+	enquiry_form = EnquiryForm(data=request.POST)
+        if enquiry_form.is_valid():
             enquiry = enquiry_form.save()
-	    
-        if "message" in request.POST and message_form.is_valid():
-            message = message_form.save()
+	else:
+            print enquiry_form    
     else:
         enquiry_form = EnquiryForm()
-    return render_to_response('index.html',
-     {'enquiry_form': enquiry_form, 'message_form':message_form}, context)
+    return render_to_response('enquiry.html',
+     {'enquiry_form': enquiry_form}, context)
+
+
+def message(request):
+    context = RequestContext(request)
+    if request.method == "POST":
+	message_form = MessageForm(data=request.POST)
+        if message_form.is_valid():
+            message = message_form.save()
+	else:
+            print "hi"   
+    else:
+        message_form = MessageForm()
+    return render_to_response('contact.html',
+     {'message_form': message_form}, context)
+
 
 
 def index(request):
@@ -80,4 +93,37 @@ def status(request, reference_no):
     template_name = 'status.html'
     context_dict = {'status': status, 't':t}
     return render(request, template_name, context_dict)
+
+
+def about(request):
+    return render(request, 'about.html', {})
+
+
+def services(request):
+    return render(request, 'service.html', {})
+
+def career(request):
+    return render(request, 'careers.html', {})
+
+def contact(request):
+    return render(request, 'contact.html', {})
+
+def vessel(request):
+    return render(request, 'vessel.html', {})
+
+def transport(request):
+    return render(request, 'transport.html', {})
+
+
+def custom(request):
+    return render(request, 'custom.html', {})
+
+def freight(request):
+    return render(request, 'freight.html', {})
+
+def pi(request):
+    return render(request, 'p&i.html', {})
+
+def ship(request):
+    return render(request, 'ship.html', {})
 

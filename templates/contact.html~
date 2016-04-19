@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from designarc.in/logis-cargo/request-qoute.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Apr 2016 11:40:31 GMT -->
+<!-- Mirrored from designarc.in/logis-cargo/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Apr 2016 11:41:20 GMT -->
 <head>
 	<meta charset="UTF-8">
 	<title>compass-shipping</title>
@@ -145,61 +145,90 @@
 
 <section class="inner-banner">
 	<div class="thm-container">
-		<h2>Register</h2>
+		<h2>Contact Us</h2>
 		<ul class="breadcumb">
 			<li><a href="/"><i class="fa fa-home"></i> Home</a></li>
-			<li><span>Register</span></li>
+			<li><span>Contact Us</span></li>
 		</ul>
 	</div>
 </section>
 
-<section class="sec-padding">
+<section class="sec-padding contact-page-content">
 	<div class="thm-container">
 		<div class="sec-title">
-			<h2><span>Register</span></h2>
-			
+			<h2><span>Get in touch</span></h2>
+			<p>Fill up below instant messaging programs.</p>
 		</div>
 		<div class="row">
-			<div class="col-md-7 col-sm-12 col-xs-12 pull-left">
-<form class="form-horizontal" role="form" method="post" action="">
-                               {% csrf_token %}    
-			{% if form.errors %}
-			{{form.errors}}
-			 {% endif %}    
-<fieldset>
-
-<!-- Form Name -->
-
-<!-- Text input-->
-<form role="form" method="post" action="/login/"">{% csrf_token %}
-                          
-                            <div class="form-group input-group">
-                                <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
-                                <input type="text" style="width:50%; height:45px" class="form-control" placeholder="User name" {{ form.username }}
-                            </div>
-                             <div class="form-group input-group">
-                                <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
-                                <input type="email" style="width:50%; height:45px" class="form-control" placeholder="Enter Email" {{ form.email }}
-                            </div>
-                             <div class="form-group input-group">
-                                <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
-                                <input type="password" style="width:50%; height:45px" class="form-control" placeholder="Enter Password" {{ form.password1 }}
-                            </div>
-
-                            <div class="form-group input-group">
-                                <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
-                                <input type="password" style="width:50%; height:45px" class="form-control" placeholder="Retype Password"  {{ form.password2 }}
-                            </div>
-                            <div class="form-group">
-		  <label class="col-md-4 control-label" for="singlebutton"></label>
-		  <div class="col-md-4">
-			<button type=submit id="singlebutton" name="singlebutton" class="btn btn-primary" style="margin: -85%;">Submit</button>
-		  </div>
+			<div class="col-md-7 col-sm-6 col-xs-12 pull-left">
+				<form method="post" class="contact-form contact-page" enctype="multipart/form-data">
+                    {% csrf_token %}
+		  
+					<p><input type="text" placeholder="Name" name="name"></p>
+					<p><input type="text" placeholder="Email" name="email"></p>
+					<p><input type="text" placeholder="phone number" name="phone"></p>
+					<p><textarea name="comment" placeholder="Message"></textarea></p>
+					<button type="submit" class="thm-btn">Submit Now</button>
+				</form>
+			</div>
+			<div class="col-md-4 col-sm-6 col-xs-12 pull-right">
+				<div class="contact-info">
+					<ul>
+						<li>
+							<div class="icon-box">
+								<i class="icon icon-Pointer"></i>
+							</div>
+							<div class="content">
+								<p>P.O BOX: 324 <br> POSTAL CODE: 318 <br>	SOHAR, AL FALAJ<br>SULTANATE OF OMAN</p>
+								
+							</div>
+						</li>
+						<li>
+							<div class="icon-box">
+								<i class="icon icon-Plaine"></i>
+							</div>
+							<div class="content">
+								<p>operation.manager@compass-ship.com <br>general.manager@compass-ship.com</p>
+							</div>
+						</li>
+						<li>
+							<div class="icon-box">
+								<i class="icon icon-Phone2"></i>
+							</div>
+							<div class="content">
+								<p>00968 9142 3785<br>00968  9293 3304</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
 		</div>
-</form>
-                            </div>
-                        </div>	
+		<!-- <div class="row">
+			<div class="col-md-12">				
+				<div class="google-map" id="contact-page-google-map" data-map-lat="-37.812802" data-map-lng="144.956981" data-map-zoom="10" data-map-title="Envato HQ"></div>
+			</div>
+		</div> -->
+	</div>
 </section>
+ 
+
+
+<section class="footer-top">
+	<div class="thm-container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="col-md-6">
+					<h3>Logistic and cargo</h3>
+					<p style="color:black;">Contact us now to get quote for all your global <br>shipping and cargo need.</p>
+				</div>
+				<div class="col-md-6">
+					<a class="thm-btn" href="/contact/">Contact Us <i class="fa fa-arrow-circle-right"></i></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section> 
+
 
 <footer id="footer" class="sec-padding">
  <div class="thm-container">

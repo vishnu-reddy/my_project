@@ -48,7 +48,7 @@
 	<div class="thm-container clearfix">
 		<div class="logo pull-left">
 			<a href="/">
-				<img src="/static/images-ship/logo22.png" style="width:80%; height:60%" alt="">
+				<img src="/static/images-ship/logo.png" alt="">
 			</a>
 		</div>
 		<div class="header-info pull-right">
@@ -125,7 +125,7 @@
 				</div>
 			</div>
 			<div class="free-qoute-button pull-right">				
-				<a href="/login">Login</a>
+				<a href="/login/">Login</a>
 			</div>
 		</div>
 	</div>
@@ -135,10 +135,11 @@
 
 <section class="inner-banner">
 	<div class="thm-container">
-		<h2>Tracking Details</h2>
+		<h2>Ship Chandling</h2>
 		<ul class="breadcumb">
 			<li><a href="/"><i class="fa fa-home"></i> Home</a></li>
-			<li><span>Search</span></li>
+			<li><a href="/service">Services</a></li>
+			<li><span>Ship Chandling</span></li>
 		</ul>
 	</div>
 </section>
@@ -148,57 +149,17 @@
 	<div class="thm-container">
 		<div class="row">
 		<div class="col-md-12 ">
-	
-    
-      {% if track %}
-    <h2 style="color:black;"> Tracking Details  </h2>
-    
-        
-    
-     <table class="table table-bordered">
-    <thead>
-      <tr>
-        <th style="color:black;">Reference Number </th>
-        <th style="color:black;">From Location </th>
-            <th style="color:black;">To Location </th>
-	<th style="color:black;">Type</th>
-	<th style="color:black;">Date</th>
-	<th style="color:black;">Status</th>
-	<th style="color:black;">No Of Pieces</th>		
-	
-	
-       
-      </tr>
-    </thead>
-    <tbody>
-     
-	 
-    
-	 
-	 {% for t in track %}
-		<tr> 
-
-        <td style="color:black;"> <b><underline><a href="{{t.reference_no}}" style="color:blue;">{{ t.reference_no}}</a></underline> </b></td>
-          <td style="color:black;"> <b>{{ t.from_location}}</b> </td>
-   <td style="color:black;"> <b>{{ t.to_location}}</b> </td>
-	<td style="color:black;"> <b>{{ t.type}} </b></td>
-	<td style="color:black;"> <b>{{ t.date}} </b></td>
-	<td style="color:black;"> <b>{{ t.status}} </b></td>
-      	<td style="color:black;"> <b>{{ t.no_of_pieces}} </b></td>
-</tr>
-	
-{% endfor %}
-	 	
-	 
-    </tbody>
-  </table>
-   {% else %}
-                    
-    <h2> No Results Found On This Keyword  </h2>
-            {% endif %}
-            
-            
-</div>
+				<div class="tab-pane fade in active" id="vessel">
+					
+					<div class="sec-title">
+					<h2><span>SHIP CHANDLING</span></h2>
+						<p>Our range includes fresh, frozen and dry stores, meat from India’s best quality producers,fruit and vegetables from our farmers and dry stores from local and imported sources. Following is a selection of categories from our extensive provisions list like Diary Goods, Fruits, Vegatables, General Groceries, Imported Food items, Tin food items, Asian goods & spices, Flowers, Dry goods... etc.</p>
+						
+					</div>
+					
+				</div>
+				</div>
+		</div>
 	</div>
 </section>
 
@@ -210,7 +171,7 @@
 			<div class="col-md-12">
 				<div class="col-md-6">
 					<h3>Logistic and cargo</h3>
-					<p>Contact us now to get quote for all your global <br>shipping and cargo need.</p>
+					<p style="color:black;">Contact us now to get quote for all your global <br>shipping and cargo need.</p>
 				</div>
 				<div class="col-md-6">
 					<a class="thm-btn" href="/contact/">Contact Us <i class="fa fa-arrow-circle-right"></i></a>

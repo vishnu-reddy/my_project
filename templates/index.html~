@@ -1,694 +1,418 @@
 <!DOCTYPE html>
-{% load static %}
 <html lang="en">
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Compass-ship</title>
-	<link href='http://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
-	<link href="static/css/bootstrap.css" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" href="static/css-com/font-awesome.css" type="text/css">
-	<link rel="stylesheet" href="static/css-com/main.css" type="text/css">
-	<link rel="stylesheet" href="static/css-com/jquery.bxslider.css" type="text/css">
-	<link rel="stylesheet" href="http://jqueryvalidation.org/files/demo/site-demos.css">
-	<script type="text/javascript" src="static/js-com/modernizr.custom.js"></script>
-	<script type="text/javascript" src="static/js-com/bootstrap.js"></script>
-	<script type="text/javascript" src="static/js-com/countUp.js"></script>
-	<script type="text/javascript" src="static/js-com/grid.js"></script>
-	<script type="text/javascript" src="static/js-com/jquery.bxslider.js"></script>
-	<script type="text/javascript" src="static/js-com/jquery.easypiechart.js"></script>
-	<script type="text/javascript" src="static/js-com/jquery.inview.js"></script>
-	<script type="text/javascript" src="static/js-com/jquery.js"></script>
-	<script type="text/javascript" src="static/js-com/jquery.label_better.js"></script>
-	<script type="text/javascript" src="static/js-com/jquery.mixitup.js"></script>
-	<script type="text/javascript" src="static/js-com/main.js"></script>	
 
-	<style>
-  .carousel-inner > .item > img,
-  .carousel-inner > .item > a > img {
-      width: 100%;
-      margin: auto;
-	  position: relative;
-	padding-right: 100px;
-	padding-right: 50px;
-	
-	
-  }
-input[type=text]:focus {
-    width: 100%;
-}
-  </style>
+
+<head>
+	<meta charset="UTF-8">
+	<title>compass-shipping</title>
+	<!-- viewport meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- styles -->
+	<!-- helpers -->
+	<link rel="stylesheet" href="/static/plugins-ship/bootstrap/css/bootstrap.min.css">
+	<!-- fontawesome css -->
+	<link rel="stylesheet" href="/static/plugins-ship/font-awesome/css/font-awesome.min.css">
+	<!-- strock gap icons -->
+	<link rel="stylesheet" href="/static/plugins-ship/Stroke-Gap-Icons-Webfont/style.css">
+	<!-- revolution slider css -->
+	<link rel="stylesheet" href="/static/plugins-ship/revolution/css/settings.css">
+	<link rel="stylesheet" href="/static/plugins-ship/revolution/css/layers.css">
+	<link rel="stylesheet" href="/static/plugins-ship/revolution/css/navigation.css">
+	<!-- flaticon css -->
+	<link rel="stylesheet" href="/static/plugins-ship/flaticon/flaticon.css">
+	<!-- jQuery ui css -->
+	<link href="/static/plugins-ship/jquery-ui-1.11.4/jquery-ui.css" rel="stylesheet">
+	<!-- owl carousel css -->
+	<link rel="stylesheet" href="/static/plugins-ship/owl.carousel-2/assets/owl.carousel.css">
+	<link rel="stylesheet" href="/static/plugins-ship/owl.carousel-2/assets/owl.theme.default.min.css">
+	<!-- animate css -->
+	<link rel="stylesheet" href="/static/plugins-ship/animate.min.css">
+	<!-- fancybox -->
+	<link rel="stylesheet" href="/static/plugins-ship/fancyapps-fancyBox/source/jquery.fancybox.css">
+
+
+
+	<!-- master stylesheet -->
+	<link rel="stylesheet" href="/static/css-ship/style.css">
+	<!-- responsive stylesheet -->
+	<link rel="stylesheet" href="/static/css-ship/responsive.css">
+
+
+
+
 </head>
 <body>
-	<div class="loader">
-		<div class="project-loader">
-			<div class="bubblingG">
-				<span id="bubblingG_1"></span>
-				<span id="bubblingG_2"></span>
-				<span id="bubblingG_3"></span>
-			</div>
-		</div>
-	</div>
-	<div class="loading" id="wrapper">
-		<!-- Fixed navbar -->
-		<div class="navbar navbar-smak navbar-fixed-top " id="navbar" role="navigation">
-			<div class="container">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><i class="fa fa-bars"></i></button>
-					<a class="navbar-brand" href="#"><img src="static/img-com/compass-logo.png" alt="logo1"></a>
-				</div>
-<br>
-				<div class="navbar-collapse collapse">
-				
-					<ul class="nav navbar-nav navbar-right animate">
-						
-						
-						<li><a href="#home">Home</a></li>
-						<li><a href="#about">About Us</a></li>
-						<li><a href="#services">Services</a></li>
-						<li><a href="#careers">Careers</a></li>
-						<li><a href="#enquiry">Enquiry</a></li>
-						<li><a href="#contact">Contact</a></li>
-						<li><a href="login">Login &nbsp;&nbsp;</a></li>
-						<li>
-						<form method="get" action="/search/">
-						<input class="form-control" type="text" placeholder="Enter Tracking ID" name="q"></input>
-						</form>
-						</li>
 
-						</ul>
-				</div>
-				<!--/.nav-collapse -->
-			</div>
-		</div>
-		<div style="position: fixed; z-index: -99; width: 100%; height: 100%"></div>
-		<div class="container">
-  <br>
-  <div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-      
-    </ol>
-
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner" role="listbox">
-      <div class="item active">
-        <img src="static/img-com/334.jpg" alt="Chania" width="460" height="345">
-      </div>
-
-      <div class="item">
-        <img src="static/img-com/22.jpg" alt="Chania" width="460" height="345">
-      </div>
-    
-      <div class="item">
-        <img src="static/img-com/253.jpg" alt="Flower" width="460" height="345">
-      </div>
-      </div>
-	   </div>
-      </div>
-	  		<section id="home" class="home home-fullscreen">
-			
-			<a href="#services" class="go-to godown">
-				<span>
-					<span class="fa fa-angle-double-down fa-2x"></span>
-					<span class="fa fa-angle-double-down fa-2x"></span>
-					<span class="fa fa-angle-double-down fa-2x"></span>
-					<span class="fa fa-angle-double-down fa-2x"></span>
-					<span class="fa fa-angle-double-down fa-2x"></span>
-				</span>
+<!-- Start header -->
+<header id="header" class="stricky">
+	<div class="thm-container clearfix">
+		<div class="logo pull-left">
+			<a href="/">
+				<img src="/static/images-ship/logo22.png" style="width:80%; height:60%" alt="">
 			</a>
-		</section>
-		<section id="about">
-			<div class="container">
-				<div class="heading">
-						
-					<h1>About Us</h1>
-					<div class="divider">
-						<span></span>
-					</div>
-					<p>Compass Shipping, a fully integrated logistics company in Sohar has grown by leaps and bounds and been well known throughout the middle east region for efficient and prompt door to door services.<br><br>
-
-
-
-We achieve consistent results in providing optimum solutions as per customer’s needs and budget by understanding, formulating and implementing the best solution. We use cut edge technology to serve major manufactures in energy, construction, retail and hospitality industries, providing project management, specialized handling, shipping and third-party distribution.</p>
-				</div>
-				<div class="row">
-					<div class="col-md-6">
-						<div class="about-item">
-							<!-- <div class="circle pull-left">
-								<i class="fa fa-clock-o"></i>
-							</div> -->
-							<!-- <h4>On time projects</h4>
-							<p class="font-m">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p> -->
-						</div>
-					</div>
-					<div class="col-md-6">
-						<div class="about-item delay2">
-							<!-- <div class="circle pull-left">
-								<i class="fa fa-rocket"></i>
-							</div>
-							<h4>Fully support</h4>
-							<p class="font-m">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p> -->
-						</div>
-					</div>
-					<div class="col-md-6">
-						<div class="about-item delay4">
-							<!-- <div class="circle pull-left">
-								<i class="fa fa-thumbs-up"></i>
-							</div>
-							<h4>Professional experience</h4>
-							<p class="font-m">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p> -->
-						</div>
-					</div>
-					<div class="col-md-6">
-						<div class="about-item delay5">
-							<!-- <div class="circle pull-left">
-								<i class="fa fa-comments"></i>
-							</div>
-							<h4>Communicative team</h4>
-							<p class="font-m">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p> -->
-						</div>
-					</div>
-				</div>
-			</div>
-		<section id="services" class="gray">
+		</div>
+		<div class="header-info pull-right">
 			
-				<div class="section">
-      <div class="container">
-	  <div class="heading">
-						<h1>Services</h1>
-						<div class="divider">
-						<span></span>
-					</div>
-						
-					</div>
-        <div class="row">
-          <div class="col-md-4">
-            <img src="static/img-com/Team/11.png" class="img-responsive" data-toggle="modal" data-target="#myModal">
-			<div class="container">
-  
- 
-
-  <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
-    
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Vessel Agency</h4>
-        </div>
-        <div class="modal-body">
-          <p style= "color:black"><b>Charterer's Agent:</b>&nbsp;&nbsp;As charterer’s agent we protect the interest of the charterer of the vessel.As charterer’s agents we can ensure cargo owners of efficient port operation at all times including reporting of cargo status, port status and conditions, customs documentations, supervise loading or discharge operation of vessel, commodity know how, and tend to daily requirements.<br> <br>
-<b>Owner's Agent :</b>&nbsp;&nbsp;As owners agents we are dedicated to protect the interest of ship owners/operators to supervise the appointed charterer agent and to monitor port call operations. Our local knowledge of situations and our keen interest in the promotion of these ports are of advantage to all vessel owners and operators. With a value added chain of strong relationships with concerned authorities, be it ports or customs the manner of our operations will assure you of our commitment to your business.<br><br>
-<b>KEY SERVICE ATTRIBUTES:</b>&nbsp;&nbsp;<span class=li>Trusted & reliable partner </span>
-<span class=li>Excellent relationship with authorities</span>
-<span class=li>Professional, well experienced, skilled & dedicated team </span>
-<span class=li>Quick turn around of vessels & cargo, ensuring operational efficiency </span>
-<span class=li>Constant connectivity with ship owners / operators & charterers</span>
-<span class=li>Expertise to handle container, car carrier, tanker & break bulk vessels.</span>
-<span class=li>Standardised services delivered always to exceed your expectations</span>
-
-
-
-
-
-</p>
-        </div>
-       
-      </div>
-      
-    </div>
-  </div>
-  
-</div>
-            
-          </div>
-          <div class="col-md-4">
-            <img src="static/img-com/Team/22.png" class="img-responsive" class="img-responsive" data-toggle="modal" data-target="#myModal-1">
-			<div class="container">
-  
- 
-
-  <!-- Modal -->
-  <div class="modal fade" id="myModal-1" role="dialog">
-    <div class="modal-dialog">
-    
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Customs Clearance</h4>
-        </div>
-        <div class="modal-body">
-           <p style= "color:black">Customs clearance is probably among the more challenging and time-consuming factors in cargo transit. We provide customs clearance solutions to take away this worry.<br> <br>
-Compass Shipping Company has a dedicated Customs Clearance and documentation division, which provides customers with a one-stop solution for all your logistics clearance requirements.
-
-
-
-
-
-</p>
-        </div>
-       
-      </div>
-      
-    </div>
-  </div>
-  
-</div>
-          </div>
-          <div class="col-md-4">
-            <img src="static/img-com/Team/33.png" class="img-responsive" data-toggle="modal" data-target="#myModal-2">
-			<div class="container">
-  
- 
-
-  <!-- Modal -->
-  <div class="modal fade" id="myModal-2" role="dialog">
-    <div class="modal-dialog">
-    
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Transportation</h4>
-        </div>
-        <div class="modal-body">
-           <p style= "color:black">We have our own dedicated fleet with which we cater all the transportation services to the customers. To Redefine Customer Satisfaction, Herald A Rationalized Approach Of Time & Cost And Eventually Bridge The Gap Between Omani Requirements And Global Standards.
-
-
-
-
-
-</p>
-        </div>
-       
-      </div>
-      
-    </div>
-  </div>
-  
-</div>
-            
-          </div>
-        </div>
-		<div class="row">
-          <div class="col-md-4">
-            <img src="static/img-com/Team/44.png" class="img-responsive" data-toggle="modal" data-target="#myModal-3">
-			<div class="container">
-  
- 
-
-  <!-- Modal -->
-  <div class="modal fade" id="myModal-3" role="dialog">
-    <div class="modal-dialog">
-    
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Freight Forwarding</h4>
-        </div>
-        <div class="modal-body">
-           <p style= "color:black">As the ocean freight is one of the key factors for strong global supply chain management. We offer efficient sea freight solutions customized to your needs for LCL & FCL.<br> <br>Compass Shipping Company has developed a highly innovative service facility for middle east sectors, with an excellent team of professionals for both sea and road transportation.
-
-</p>
-        </div>
-       
-      </div>
-      
-    </div>
-  </div>
-  
-</div>
-            
-          </div>
-          <div class="col-md-4">
-            <img src="static/img-com/Team/55.png" class="img-responsive" class="img-responsive" data-toggle="modal" data-target="#myModal-4">
-			<div class="container">
-  
- 
-
-  <!-- Modal -->
-  <div class="modal fade" id="myModal-4" role="dialog">
-    <div class="modal-dialog">
-    
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Ship Chandling</h4>
-        </div>
-        <div class="modal-body">
-           <p style= "color:black">Our range includes fresh, frozen and dry stores, meat from India’s best quality producers,fruit and vegetables from our farmers and dry stores from local and imported sources. Following is a selection of categories from our extensive provisions list like Diary Goods, Fruits, Vegatables, General Groceries, Imported Food items, Tin food items, Asian goods & spices, Flowers, Dry goods... etc
-</p>
-        </div>
-       
-      </div>
-      
-    </div>
-  </div>
-  
-</div>
-          </div>
-          <div class="col-md-4">
-            <img src="static/img-com/Team/66.png" class="img-responsive"class="img-responsive" data-toggle="modal" data-target="#myModal-5">
-			<div class="container">
-  
- 
-
-  <!-- Modal -->
-  <div class="modal fade" id="myModal-5" role="dialog">
-    <div class="modal-dialog">
-    
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">P & I Correspondents</h4>
-        </div>
-        <div class="modal-body">
-          <p style= "color:black">
-<b>We provide the following services</b>&nbsp;&nbsp;
-<span class=li>Cargo Condition Survey </span>
-<span class=li>Hatch Cleaning Survey</span>
-<span class=li>Offhire Bunker Survey </span>
-<span class=li>Offhire Bunker + Condition Survey </span>
-<span class=li>Onhire Bunker Survey </span>
-<span class=li>Onhire Bunker + Condition Survey </span>
-<span class=li>Draft Survey </span>
-<span class=li>port Captaincy </span>
-<span class=li>Container Dry Box Survey </span>
-<span class=li>Refeer Container Survey </span>
-<span class=li>Car Survey </span>
-
-</p>
-        </div>
-       
-      </div>
-      
-    </div>
-  </div>
-  
-</div>
-            
-          </div>
-        </div>
-      </div>
-    </div>
-					
-					
-							
-			
-		</section>
-		
-		</section>
-		<section class="careers" id="careers">
-			<div class="container">
-				<div class="heading">
-					
-					<h1>Careers</h1>
-					<div class="divider"><span></span></div><br><br>
-					<p>Compass Shipping Services LLC is an equal opportunity employer who strives to attract the best talent and develop them for a consistent and mutually rewarding relationship. The focus is to align HR strategy, guided by the core values, in realization of the company's vision. The HR philosophy aims to encourage ethical practices and a strong performance driven work system. Policies are designed to promote talent based on professional attributes and commitment.</p>
-					Email your profile to admin.manager@compass-ship.com
+			<div class="info-box">
+				<div class="icon-box no-border">
+					<!-- <i class="icon icon-Timer"></i> -->
 				</div>
-				</div><br>
-				<div class="branded-section quote">
-				<div class="masked">
-					<div class="container">
-						<div id="testimonials" class="bxslider clearfix">
-							<blockquote>
-								<p>Global Container Shipping</p>
-								<div class="divider">
-									<span></span>
-								</div>
-								
-							</blockquote>
-							<blockquote>
-								<p>A Commitment To Safety</p>
-								<div class="divider">
-									<span></span>
-								</div>
-								
-							</blockquote>
-							<blockquote>
-								<p>24 Hour Contact</p>
-								<div class="divider">
-									<span></span>
-								</div>
-								
-							</blockquote>
+				<!-- <div class="text-box">
+					<p class="highlighted">Mon - Sat 9.00 - 18.00</p>
+					<p>Sunday Closed</p>
+				</div> -->
+			</div>
+			<div class="info-box">
+				<div class="icon-box">
+					<i class="icon icon-Phone2"></i>
+				</div>
+				<div class="text-box">
+					<p class="highlighted">Call Us:</p>
+					<p class="phone-number">00968 9142 3785</p>
+				</div>
+			</div>
+			<div class="info-box search-box-wrapper">
+				<div class="icon-box">
+					<i class="flaticon-search51"></i>
+				</div>
+				<form action="#" class="search-box-holder">
+					<div class="search-box">
+						<div class="form">
+							<input type="text" placeholder="Track Your Shipment">
+							<button type="submit"><span>GO</span></button>
 						</div>
 					</div>
-				</div>
+				</form>
 			</div>
-				</section><br>
-				<section id="enquiry">
-		<div class="heading">
-					
-					<br><br>
-					<h1>Enquiry</h1>
-					<div class="divider">
-						<span></span>
-					</div>
-<form class="form-signin span6 form-horizontal"  id="enquiry_form" method="post"
- enctype="multipart/form-data">
-                    {% csrf_token %}
-	
-<fieldset>
-
-
-
-
-<!-- Select Basic -->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="selectbasic">Services*</label>
-  <div class="col-md-4">
-    <select id="id_services" name="services" class="form-control" required>
-      <option value="Please select a service required">Please select a service required</option>
-      <option value="Land Freight Management">Land Freight Management</option>
-      <option value="Sea Freight Management">Sea Freight Management</option>
-      <option value="Air Freight Management">Air Freight Management</option>
-      <option value="Customs Clearance">Customs Clearance</option>
-      <option value="Worldwide Door Delivery">Worldwide Door Delivery</option>
-      <option value="Project Cargo Handling">Project Cargo Handling</option>
-      <option value="Marine Insurance">Marine Insurance</option>
-    </select>
-  </div>
-</div>
-
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="textinput">Full Name*</label>  
-  <div class="col-md-4">
-  <input id="id_full_name" name="full_name" type="text"  class="form-control input-md" required>
-    
-  </div>
-</div>
-
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="textinput">Organization*</label>  
-  <div class="col-md-4">
-  <input id="id_organisation" name="organisation" type="text"  class="form-control input-md" required>
-    
-  </div>
-</div>
-
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="textinput">Designation*</label>  
-  <div class="col-md-4">
-  <input id="id_designation" name="designation" type="text"  class="form-control input-md" required>
-    
-  </div>
-</div>
-
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="textinput">Contact Number*</label>  
-  <div class="col-md-4">
-  <input id="id_contact_number" name="contact_number" type="text"  class="form-control input-md" required>
-    
-  </div>
-</div>
-
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="textinput">E-mail*</label>  
-  <div class="col-md-4">
-  <input id="id_email" name="email" type="text"  class="form-control input-md" required>
-    
-  </div>
-</div>
-
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="textinput">City*</label>  
-  <div class="col-md-4">
-  <input id="id_city" name="city" type="text"  class="form-control input-md" required>
-    
-  </div>
-</div>
-
-
-
-<!-- Select Basic -->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="selectbasic">Country*</label>
-  <div class="col-md-4">
-    <select id="id_country" name="country" class="form-control">
-      <option value="Please select a country">Please select a country</option>
-      <option value="UAE">UAE</option>
-      <option value="Saudi Arabic">Saudi Arabic</option>
-      <option value="Oman">Oman</option>
-      <option value="Qatar">Qatar</option>
-      <option value="Bahrain">Bahrain</option>
-    </select>
-  </div>
-</div>
-
-
-<!-- Textarea -->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="textarea">Enquiry</label>
-  <div class="col-md-4">                     
-    <textarea class="form-control" id="id_enquiry" name="enquiry" type="text"></textarea>
-  </div>
-</div>
-<!-- Button -->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="singlebutton"></label>
-  <div class="col-md-4">
-    <button type=submit id="singlebutton" name="singlebutton" class="btn btn-primary">Submit</button>
-  </div>
-</div>
-
-
-
-</fieldset>
-</form>
-</div>
-		
-		<section id="contact" class="gray">
-			<div class="container">
-				<div class="heading">
-					
-					
-					<h1>Contact Us</h1>
-					<div class="divider">
-						<span></span>
-					</div>
-					<p>Sohar 24 Hour Communication Centre and Helpdesk.</p>
-				</div>
-				<div class="row">
-					<div class="col-md-4 adress-element ">
-						<i class="fa fa-home fa-2x"></i>
-						<h3>Our adress</h3>
-						<span class="font-l">Our adress 123, Serbia</span>
-					</div>
-					<div class="col-md-4 adress-element delay2">
-						<i class="fa fa-comment fa-2x"></i>
-						<h3>Our mail</h3>
-						<span class="font-l">operation.manager@compass-ship.com 
-					</span>
-					<br>
-					<span class="font-l">general.manager@compass-ship.com
-					</span>
-					</div>
-					<div class="col-md-4 adress-element delay4">
-						<i class="fa fa-phone fa-2x"></i>
-						<h3>Our phone</h3>
-						<span class="font-l">00968 9142 3785/92933304</span>
-					</div>
-				</div>
-			</div>
-			<div class="branded-section contact-form">
-				<div class="masked">
-					<div class="container">
-						<div class="heading">
-							<h1 class="light-font">Send us a message</h1>
-							
-						</div>
-						<form class="form-signin span6 form-horizontal" method="post"
- enctype="multipart/form-data">
-                    {% csrf_token %}
-                   
-
-							<div class="form-group">
-								<div class="col-sm-4">
-									<input id="id_name" name="name" type="text"  class="form-control label_better" placeholder="What's Your name..">
-				
-								</div>
-								<div class="col-sm-4">
-									<input id="id_email" name="email" type="text"  class="form-control label_better" placeholder="Email..">
-								</div>
-								<div class="col-sm-4">
-									<input id="id_phone" name="phone" type="text"  class="form-control label_better" placeholder="Phone..">
-								</div>
-							</div>
-							<div class="form-group">
-								<div class="col-sm-12">
-									<textarea class="form-control label_better" id="id_comment" name="comment" type="text" placeholder="Your comment.." rows="7"></textarea>
-						
-								</div>
-							</div>
-							<div class="form-group commands">
-								<button type="submit" name="message" class="btn btn-primary">Send message</button>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-			
-		</section>
-		<footer>
-			<div class="container">
-				<p style="color:white">&copy; Copyright <a href="http://compass-ship.com/k">compass-ship.com</a> © 2016 - Compass Shipping Services L.L.C</p>
-				<ul class="social-list">
-					<li class="facebook">
-						<a href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook"></i></a>
-					</li>
-					<li class="twitter">
-						<a href="https://www.twitter.com" target="_blank"><i class="fa fa-twitter"></i></a>
-					</li>
-					
-					<li class="youtube">
-						<a href="https://www.youtube.com" target="_blank"><i class="fa fa-youtube"></i></a>
-					</li>
-				</ul>
-				<a href="#home" class="square-l goup" style="position: relative">
-					<span>
-						<span class="fa fa-angle-double-up fa-2x"></span>
-						<span class="fa fa-angle-double-up fa-2x"></span>
-						<span class="fa fa-angle-double-up fa-2x"></span>
-						<span class="fa fa-angle-double-up fa-2x"></span>
-						<span class="fa fa-angle-double-up fa-2x"></span>
-			</span>
-				</a>
-			</div>
-		</footer>
+		</div>
 	</div>
-	<!-- Load all jsavascrip files -->
-	<script type="text/javascript" src="static/js-com/jquery.js"></script>
-	<script type="text/javascript" src="static/js-com/bootstrap.js"></script>
-	<script type="text/javascript" src="static/js-com/jquery.bxslider.js"></script>
-	<script type="text/javascript" src="static/js-com/jquery.label_better.js"></script>
-	<script type="text/javascript" src="static/js-com/jquery.mixitup.js"></script>
-	<script type="text/javascript" src="static/js-com/jquery.easypiechart.js"></script>
-	<script type="text/javascript" src="static/js-com/jquery.inview.js"></script>
-	<script type="text/javascript" src="static/js-com/countUp.js"></script>
-	<script type="text/javascript" src="static/js-com/main.js"></script>
-	<script src="static/js-com/grid.js"></script>
-	<script>
-	$(function() {
-		Grid.init();
-	});
-	</script>
+</header>
+<!-- End header  -->
+
+<!-- Start mainmenu -->
+<nav class="main-menu-wrapper stricky">
+	<div class="thm-container menu-gradient ">
+		<div class="clearfix">
+			<div class="nav-holder pull-left">
+				<div class="nav-header">
+					<button><i class="fa fa-bars"></i></button>
+				</div>
+				<div class="nav-footer">
+					<ul class="nav">
+						<li class="has-submenu">
+					<a href="/">Home</a>
+					
+				</li>
+						<li class="has-submenu">
+							<a href="/about/">about us</a>
+							
+						</li>
+						<li class="has-submenu">
+							<a href="/service/">Services</a>
+							
+						</li>
+						<li class="has-submenu">
+							<a href="/careers/">Careers</a>
+							
+						</li>
+						<li class="has-submenu">
+							<a href="/enquiry/">Enquiry</a>
+							
+						</li>
+						
+						<li><a href="/contact/">contact us</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="free-qoute-button pull-right">				
+				<a href="/login/">Login</a>
+			</div>
+		</div>
+	</div>
+</nav>
+<!-- End mainmenu -->
+
+
+<div id="carousel-example" data-interval="false" class="carousel slide"
+    data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="item">
+          <img src="/static/images-ship/slider/6666.jpg" style="width: 100%; height: 100%; ">
+          
+        </div>
+        <div class="item">
+          <img src="/static/images-ship/slider/5.jpg" style="width: 100%; height: 100%; ">
+         
+        </div>
+        <div class="item active">
+          <img src="/static/images-ship/slider/7.jpg" style="width: 100%; height: 100%; ">
+          
+        </div>
+      </div>
+      <a class="left carousel-control" href="#carousel-example" data-slide="prev"><i class="icon-prev  fa fa-angle-left"></i></a>
+      <a class="right carousel-control" href="#carousel-example" data-slide="next"><i class="icon-next fa fa-angle-right"></i></a>
+    </div>
+
+<section class="about-info-box sec-padding">
+	<div class="thm-container">
+		<div class="row">
+			<div class="col-lg-4 hidden-md hidden-sm hidden-xs">
+				<div class="img-cap-effect">
+					
+				</div>
+			</div>
+			
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="welcome-services home-one">
+	<div class="thm-container">
+		<div class="sec-title">
+			<h2><span>Our Featured Services</span></h2>
+			
+		</div>
+		<div class="row">
+			<div class="col-md-6">
+				<div class="welcome-single-services">
+					<div class="img-box">
+						<img src="/static/images-ship/welcome-services/1.png" alt="">
+					</div>
+					<div class="text-box">
+						<div class="content">
+							<h3>Vessel Agency</h3>
+							<p>As charterer’s agent we protect the interest of the charterer of the vessel.As charterer’s agents we can ensure cargo .</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="welcome-single-services">
+					<div class="img-box">
+						<img src="/static/images-ship/welcome-services/2.png" alt="">
+					</div>
+					<div class="text-box">
+						<div class="content">
+							<h3>Customs Clearance</h3>
+							<p>Customs clearance is probably among the more challenging and time-consuming factors in cargo transit.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="welcome-single-services">
+					<div class="img-box">
+						<img src="/static/images-ship/welcome-services/3.png" alt="">
+					</div>
+					<div class="text-box">
+						<div class="content">
+							<h3>Transportation</h3>
+							<p>We have our own dedicated fleet with which we cater all the transportation services to the customers.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="welcome-single-services">
+					<div class="img-box">
+						<img src="/static/images-ship/welcome-services/4.png" alt="">
+					</div>
+					<div class="text-box">
+						<div class="content">
+							<h3>Freight Forwarding</h3>
+							<p>As the ocean freight is one of the key factors for strong global supply chain management.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="welcome-single-services">
+					<div class="img-box">
+						<img src="/static/images-ship/welcome-services/5.png" alt="">
+					</div>
+					<div class="text-box">
+						<div class="content">
+							<h3>Ship Chandling</h3>
+							<p>Our range includes fresh, frozen and dry stores, meat from India’s best quality producers,fruit and vegetables .</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="welcome-single-services">
+					<div class="img-box">
+						<img src="/static/images-ship/welcome-services/6.png" alt="">
+					</div>
+					<div class="text-box">
+						<div class="content">
+							<h3>P & I Correspondents</h3>
+							<p>Cargo Condition Survey.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<section class="footer-top">
+	<div class="thm-container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="col-md-6">
+					<h3>Logistic and cargo</h3>
+					<p style="color:black;">Contact us now to get quote for all your global <br>shipping and cargo need.</p>
+				</div>
+				<div class="col-md-6">
+					<a class="thm-btn" href="/contact/">Contact Us <i class="fa fa-arrow-circle-right"></i></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section> 
+
+
+<footer id="footer" class="sec-padding">
+ <div class="thm-container">
+  <div class="row">
+   <div class="col-md-3 col-sm-6 footer-widget">
+    <div class="about-widget">
+     <a href="/"><img src="/static/images-ship/footer-logo1.png" alt="Awesome Image"/></a>
+     
+     <ul class="social">
+      <li><a href="/facebook"><i class="fa fa-facebook"></i></a></li>
+      <li><a href="/twitter"><i class="fa fa-twitter"></i></a></li>
+      <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+      <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+     </ul>
+    </div>
+   </div>
+   <div class="col-md-3 col-sm-6 footer-widget">
+    <div class="pl-30">
+     <div class="title">
+      <h3><span>Our Services</span></h3>
+     </div>
+     <ul class="link-list">
+      <li><a href="/vessel/">Vessel Agency</a></li>
+      <li><a href="/custom/">Customs Clearance</a></li>
+      <li><a href="/transport/">Transportation</a></li>
+      <li><a href="/freight/">Freight Forwarding</a></li>
+      <li><a href="/ship/">Ship Chandling</a></li>
+      <li><a href="/picorrespondents/">P & I Correspondents</a></li>
+     </ul>
+    </div>
+   </div>
+   <div class="col-md-2 col-sm-6 footer-widget">
+    <div class="title">
+     <h3><span>Quick Links</span></h3>
+    </div>
+    <ul class="link-list">
+     <li><a href="/">Home</a></li>
+     <li><a href="/about/">About Us</a></li>
+     <li><a href="/service/">Services</a></li>
+     <li><a href="/careers/">Careers</a></li>
+     <li><a href="/enquiry/">Enquiry</a></li>
+     <li><a href="/contact/">Contact Us</a></li>
+    </ul>
+   </div>
+   <div class="col-md-4 col-sm-6 footer-widget">
+    <div class="title">
+     <h3><span>Quick Contact</span></h3>
+    </div>
+    <ul class="contact-infos">
+     <li>
+      <div class="icon-box">
+       <i class="fa fa-map-marker"></i>
+      </div>
+      <div class="text-box">
+       <p>P.O BOX: 324 <br> POSTAL CODE: 318 <br> SOHAR, AL FALAJ<br>SULTANATE OF OMAN</p>
+      </div>
+     </li>
+     <li>
+      <div class="icon-box">
+       <i class="fa fa-phone"></i>
+      </div>
+      <div class="text-box">
+       <p>00968 9142 3785<br>00968  9293 3304</p>
+      </div>
+     </li>
+     <li>
+      <div class="icon-box">
+       <i class="fa fa-envelope-o"></i>
+      </div>
+      <div class="text-box">
+       <p>operation.manager@compass-ship.com <br>general.manager@compass-ship.com</p>
+      </div>
+     </li>
+     <li>
+      
+     </li>
+    </ul>
+   </div>
+  </div>
+ </div>
+</footer>
+
+<section class="bottom-bar">
+	<div class="thm-container clearfix">
+		<div class="pull-left">
+			<p>Copyright © Compass-Shipping 2016. All rights reserved.</p>
+		</div>
+		<div class="pull-right">
+			<p>Created by: Delevere</p>
+		</div>
+	</div>
+</section>
+
+
+<!-- jQuery js -->
+<script src="/static/plugins-ship/jquery/jquery-1.11.3.min.js"></script>
+<!-- bootstrap js -->
+<script src="/static/plugins-ship/bootstrap/js/bootstrap.min.js"></script>
+<!-- jQuery ui js -->
+<script src="/static/plugins-ship/jquery-ui-1.11.4/jquery-ui.js"></script>
+<!-- owl carousel js -->
+<script src="/static/plugins-ship/owl.carousel-2/owl.carousel.min.js"></script>
+<!-- jQuery appear -->
+<script src="/static/plugins-ship/jquery-appear/jquery.appear.js"></script>
+<!-- jQuery countTo -->
+<script src="/static/plugins-ship/jquery-countTo/jquery.countTo.js"></script>
+<!-- jQuery validation -->
+<script src="/static/plugins-ship/jquery-validation/dist/jquery.validate.min.js"></script>
+<!-- gmap.js helper -->
+<script src="http://maps.google.com/maps/api/js"></script>
+<!-- gmap.js -->
+<script src="/static/plugins-ship/gmap.js"></script>
+<!-- mixit up -->
+<script src="/static/plugins-ship/jquery.mixitup.min.js"></script>
+
+<!-- revolution slider js -->
+<script src="/static/plugins-ship/revolution/js/jquery.themepunch.tools.min.js"></script>
+<script src="/static/plugins-ship/revolution/js/jquery.themepunch.revolution.min.js"></script>
+<script src="/static/plugins-ship/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+<script src="/static/plugins-ship/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+<script src="/static/plugins-ship/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+<script src="/static/plugins-ship/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+<script src="/static/plugins-ship/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+<script src="/static/plugins-ship/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+<script src="/static/plugins-ship/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+<script src="/static/plugins-ship/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+<script src="/static/plugins-ship/revolution/js/extensions/revolution.extension.video.min.js"></script>
+
+<!-- fancy box -->
+<script src="/static/plugins-ship/fancyapps-fancyBox/source/jquery.fancybox.pack.js"></script>
+<!-- type script -->
+<script src="/static/plugins-ship/typed.js-master/dist/typed.min.js"></script>
+
+<!-- theme custom js  -->
+<script src="/static/js-ship/main.js"></script>
+
+
+
 </body>
+
+<!-- Mirrored from designarc.in/logis-cargo/single-service.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Apr 2016 11:38:29 GMT -->
 </html>

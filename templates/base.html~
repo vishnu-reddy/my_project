@@ -1,10 +1,11 @@
+{% block content %}
 <!DOCTYPE html>
 <html lang="en">
 
 <!-- Mirrored from designarc.in/logis-cargo/request-qoute.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Apr 2016 11:40:31 GMT -->
 <head>
 	<meta charset="UTF-8">
-	<title>compass-shipping</title>
+	<title>Logis Cargo - We are transport network - HTML 5 Template</title>
 	<!-- viewport meta -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -47,7 +48,7 @@
 <header id="header" class="stricky">
 	<div class="thm-container clearfix">
 		<div class="logo pull-left">
-			<a href="/">
+			<a href="/index/">
 				<img src="/static/images-ship/logo.png" alt="">
 			</a>
 		</div>
@@ -75,10 +76,10 @@
 				<div class="icon-box">
 					<i class="flaticon-search51"></i>
 				</div>
-				<form method="get" action="/search/" class="search-box-holder">
+				<form action="#" class="search-box-holder">
 					<div class="search-box">
 						<div class="form">
-							<input type="text" placeholder="Track Your Shipment" name="q">
+							<input type="text" placeholder="Track Your Shipment">
 							<button type="submit"><span>GO</span></button>
 						</div>
 					</div>
@@ -100,7 +101,7 @@
 				<div class="nav-footer">
 					<ul class="nav">
 						<li class="has-submenu">
-					<a href="/">Home</a>
+					<a href="/index/">Home</a>
 					<!-- <ul class="submenu">
 						<li><a href="index-2.html">Home Two</a></li>
 						<li><a href="index-3.html">Home Three</a></li>
@@ -130,168 +131,137 @@
 							
 						</li>
 						
-						<li><a href="/contact/">contact us</a></li>
+						<li><a href="contact.html">contact us</a></li>
 					</ul>
 				</div>
 			</div>
 			<div class="free-qoute-button pull-right">				
-				<a href="/login/">Login</a>
+				<a href="request-qoute.html">Login</a>
 			</div>
 		</div>
 	</div>
 </nav>
-<!-- End mainmenu -->
 
 
-<section class="inner-banner">
+
+
+
+
+
+<section class="footer-top">
 	<div class="thm-container">
-		<h2>Register</h2>
-		<ul class="breadcumb">
-			<li><a href="/"><i class="fa fa-home"></i> Home</a></li>
-			<li><span>Register</span></li>
-		</ul>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="col-md-6">
+					<h3>Logistic and cargo</h3>
+					<p>Contact us now to get quote for all your global <br>shipping and cargo need.</p>
+				</div>
+				<div class="col-md-6">
+					<a class="thm-btn" href="contact.html">Contact Us <i class="fa fa-arrow-circle-right"></i></a>
+				</div>
+			</div>
+		</div>
 	</div>
 </section>
 
-<section class="sec-padding">
-	<div class="thm-container">
-		<div class="sec-title">
-			<h2><span>Register</span></h2>
-			
-		</div>
-		<div class="row">
-			<div class="col-md-7 col-sm-12 col-xs-12 pull-left">
-<form class="form-horizontal" role="form" method="post" action="">
-                               {% csrf_token %}    
-			{% if form.errors %}
-			{{form.errors}}
-			 {% endif %}    
-<fieldset>
-
-<!-- Form Name -->
-
-<!-- Text input-->
-<form role="form" method="post" action="/login/"">{% csrf_token %}
-                          
-                            <div class="form-group input-group">
-                                <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
-                                <input type="text" style="width:50%; height:45px" class="form-control" placeholder="User name" {{ form.username }}
-                            </div>
-                             <div class="form-group input-group">
-                                <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
-                                <input type="email" style="width:50%; height:45px" class="form-control" placeholder="Enter Email" {{ form.email }}
-                            </div>
-                             <div class="form-group input-group">
-                                <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
-                                <input type="password" style="width:50%; height:45px" class="form-control" placeholder="Enter Password" {{ form.password1 }}
-                            </div>
-
-                            <div class="form-group input-group">
-                                <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
-                                <input type="password" style="width:50%; height:45px" class="form-control" placeholder="Retype Password"  {{ form.password2 }}
-                            </div>
-                            <div class="form-group">
-		  <label class="col-md-4 control-label" for="singlebutton"></label>
-		  <div class="col-md-4">
-			<button type=submit id="singlebutton" name="singlebutton" class="btn btn-primary" style="margin: -85%;">Submit</button>
-		  </div>
-		</div>
-</form>
-                            </div>
-                        </div>	
-</section>
 
 <footer id="footer" class="sec-padding">
- <div class="thm-container">
-  <div class="row">
-   <div class="col-md-3 col-sm-6 footer-widget">
-    <div class="about-widget">
-     <a href="/"><img src="/static/images-ship/footer-logo1.png" alt="Awesome Image"/></a>
-     
-     <ul class="social">
-      <li><a href="/facebook"><i class="fa fa-facebook"></i></a></li>
-      <li><a href="/twitter"><i class="fa fa-twitter"></i></a></li>
-      <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-      <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-     </ul>
-    </div>
-   </div>
-   <div class="col-md-3 col-sm-6 footer-widget">
-    <div class="pl-30">
-     <div class="title">
-      <h3><span>Our Services</span></h3>
-     </div>
-     <ul class="link-list">
-      <li><a href="/vessel/">Vessel Agency</a></li>
-      <li><a href="/custom/">Customs Clearance</a></li>
-      <li><a href="/transport/">Transportation</a></li>
-      <li><a href="/freight/">Freight Forwarding</a></li>
-      <li><a href="/ship/">Ship Chandling</a></li>
-      <li><a href="/picorrespondents/">P & I Correspondents</a></li>
-     </ul>
-    </div>
-   </div>
-   <div class="col-md-2 col-sm-6 footer-widget">
-    <div class="title">
-     <h3><span>Quick Links</span></h3>
-    </div>
-    <ul class="link-list">
-     <li><a href="/">Home</a></li>
-     <li><a href="/about/">About Us</a></li>
-     <li><a href="/service/">Services</a></li>
-     <li><a href="/careers/">Careers</a></li>
-     <li><a href="/enquiry/">Enquiry</a></li>
-     <li><a href="/contact/">Contact Us</a></li>
-    </ul>
-   </div>
-   <div class="col-md-4 col-sm-6 footer-widget">
-    <div class="title">
-     <h3><span>Quick Contact</span></h3>
-    </div>
-    <ul class="contact-infos">
-     <li>
-      <div class="icon-box">
-       <i class="fa fa-map-marker"></i>
-      </div>
-      <div class="text-box">
-       <p>P.O BOX: 324 <br> POSTAL CODE: 318 <br> SOHAR, AL FALAJ<br>SULTANATE OF OMAN</p>
-      </div>
-     </li>
-     <li>
-      <div class="icon-box">
-       <i class="fa fa-phone"></i>
-      </div>
-      <div class="text-box">
-       <p>00968 9142 3785<br>00968  9293 3304</p>
-      </div>
-     </li>
-     <li>
-      <div class="icon-box">
-       <i class="fa fa-envelope-o"></i>
-      </div>
-      <div class="text-box">
-       <p>operation.manager@compass-ship.com <br>general.manager@compass-ship.com</p>
-      </div>
-     </li>
-     <li>
-      
-     </li>
-    </ul>
-   </div>
-  </div>
- </div>
+	<div class="thm-container">
+		<div class="row">
+			<div class="col-md-3 col-sm-6 footer-widget">
+				<div class="about-widget">
+					<a href="#"><img src="/static/images-ship/footer-logo.png" alt="Awesome Image"/></a>
+					<p>Lorem ipsum dolor sit amet, consecte- tur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.</p>
+					<a href="#">Read More <i class="fa fa-angle-double-right"></i></a>
+					<ul class="social">
+						<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+						<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+						<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+						<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-6 footer-widget">
+				<div class="pl-30">
+					<div class="title">
+						<h3><span>Our Services</span></h3>
+					</div>
+					<ul class="link-list">
+						<li><a href="#">Sea Freight</a></li>
+						<li><a href="#">Road Transportation</a></li>
+						<li><a href="#">Air Freight</a></li>
+						<li><a href="#">Railway Logistics</a></li>
+						<li><a href="#">Packaging & Storage</a></li>
+						<li><a href="#">Warehousing</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-md-2 col-sm-6 footer-widget">
+				<div class="title">
+					<h3><span>Quick Links</span></h3>
+				</div>
+				<ul class="link-list">
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Our Services</a></li>
+					<li><a href="#">About Us</a></li>
+					<li><a href="#">News</a></li>
+					<li><a href="#">Contact Us</a></li>
+				</ul>
+			</div>
+			<div class="col-md-4 col-sm-6 footer-widget">
+				<div class="title">
+					<h3><span>Quick Links</span></h3>
+				</div>
+				<ul class="contact-infos">
+					<li>
+						<div class="icon-box">
+							<i class="fa fa-map-marker"></i>
+						</div>
+						<div class="text-box">
+							<p><b>Logis Cargo Ltd.</b> <br> 42B, Tailstoi Town 5248 MT, Australia</p>
+						</div>
+					</li>
+					<li>
+						<div class="icon-box">
+							<i class="fa fa-phone"></i>
+						</div>
+						<div class="text-box">
+							<p>+ 01865 524 8503  /  1254 954 7854</p>
+						</div>
+					</li>
+					<li>
+						<div class="icon-box">
+							<i class="fa fa-envelope-o"></i>
+						</div>
+						<div class="text-box">
+							<p>contact@logiccargo.com</p>
+						</div>
+					</li>
+					<li>
+						<div class="icon-box">
+							<i class="icon icon-Timer"></i>
+						</div>
+						<div class="text-box">
+							<p>Monday - Friday : 8.00 - 19.00</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
 </footer>
 
 <section class="bottom-bar">
 	<div class="thm-container clearfix">
 		<div class="pull-left">
-			<p>Copyright © Compass-Shipping 2016. All rights reserved.</p>
+			<p>Copyright © Logic Cargo 2016. All rights reserved.</p>
 		</div>
 		<div class="pull-right">
-			<p>Created by: Delevere</p>
+			<p>Created by: DesignArc</p>
 		</div>
 	</div>
 </section>
+
 
 <!-- jQuery js -->
 <script src="/static/plugins-ship/jquery/jquery-1.11.3.min.js"></script>
@@ -334,10 +304,4 @@
 
 <!-- theme custom js  -->
 <script src="/static/js-ship/main.js"></script>
-
-
-
-</body>
-
-<!-- Mirrored from designarc.in/logis-cargo/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Apr 2016 11:41:21 GMT -->
-</html>
+{% endblock %}

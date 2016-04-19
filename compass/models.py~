@@ -5,33 +5,20 @@ from django.contrib.auth.models import User
 
 class Enquiry(models.Model):
 
-    land_freight_management = "Land Freight Management"
-    sea_freight_management = "Sea Freight Management"
-    air_freight_management = "Air Freight Management"
+    vessel_agency = "Vessel Agency"
     customs_clearance = "Customs Clearance"
-    worldwide_door_delivery = "Worldwide Door Delivery"
-    project_cargo_handling = "Project Cargo Handling"
-    marine_insurance = "Marine Insurance"
-    enquiry_choices = ((land_freight_management, 'Land Freight Management'),
-     (sea_freight_management, "Sea Freight Management"),
-    (air_freight_management, "Air Freight Management"),
+    trasportation = "Transportation"
+    freight_forwarding = "Freight Forwarding"
+    ship_chandling = "Ship Chandling"
+    p_i_correspondents = "P & I Correspondents"
+    enquiry_choices = ((vessel_agency, 'Vessel Agency'),
      (customs_clearance , "Customs Clearance"),
-     (worldwide_door_delivery , "Worldwide Door Delivery"),
-     (project_cargo_handling , "Project Cargo Handling"),
-     (marine_insurance , "Marine Insurance"))
+    (trasportation , "Transportation"),
+     (freight_forwarding , "Freight Forwarding"),
+     (ship_chandling , "Ship Chandling"),
+     (p_i_correspondents , "P & I Correspondents"))
     
-    uae = "UAE"
-    saudi_arabic = "Saudi Arabic"
-    oman = "Oman"
-    qatar = "Qatar"
-    bahrain = "Bahrain"
-    country_choices = ((uae, "UAE"),
-	(saudi_arabic , "Saudi Arabic"),
-	(oman, "Oman"),
-	(qatar, "Qatar"),
-	(bahrain, "Bahrain"))
-
-
+   
     services = models.CharField(max_length=40, choices=enquiry_choices)
     full_name = models.CharField(max_length=30)
     organisation = models.CharField(max_length=40)
@@ -39,7 +26,7 @@ class Enquiry(models.Model):
     contact_number = models.CharField(max_length=55)
     email = models.CharField(max_length=50)
     city = models.CharField(max_length=50)
-    country = models.CharField(max_length=40, choices=country_choices)
+    country = models.CharField(max_length=80)
     enquiry = models.CharField(max_length=255, null=True, blank=True)
     def __unicode__(self):
         return self.full_name
@@ -90,4 +77,4 @@ class CurrentStatus(models.Model):
     current_to_location = models.CharField(max_length=100)
     status = models.CharField(max_length=40, choices=track_choices)
     def __unicode__(self):
-	return self.reference_no
+	return self.status
