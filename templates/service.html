@@ -38,7 +38,12 @@
 	<!-- responsive stylesheet -->
 	<link rel="stylesheet" href="/static/css-ship/responsive.css">
 
-
+<style>
+.img-box{
+width=400px;
+height:220px;
+}
+</style>
 
 </head>
 <body>
@@ -71,19 +76,7 @@
 					<p class="phone-number">00968 9142 3785</p>
 				</div>
 			</div>
-			<div class="info-box search-box-wrapper">
-				<div class="icon-box">
-					<i class="flaticon-search51"></i>
-				</div>
-				<form method="get" action="/search/" class="search-box-holder">
-					<div class="search-box">
-						<div class="form">
-							<input type="text" placeholder="Track Your Shipment" name="q">
-							<button type="submit"><span>GO</span></button>
-						</div>
-					</div>
-				</form>
-			</div>
+			
 		</div>
 	</div>
 </header>
@@ -130,12 +123,18 @@
 							
 						</li>
 						<li><a href="/contact/">contact us</a></li>
+						<li><form method="get" action="/search/" class="search-box-holder">
+					<div class="search-box">
+						<div class="form">
+							<input type="text" style="width:300px; height:50px;" name="q" placeholder="&nbsp;&nbsp;&nbsp;Track Your Shipment">
+							<button type="submit"><span>GO</span></button>
+						</div>
+					</div>
+				</form></li>
 					</ul>
 				</div>
 			</div>
-			<div class="free-qoute-button pull-right">				
-				<a href="/login/">Login</a>
-			</div>
+			
 		</div>
 	</div>
 </nav>
@@ -171,7 +170,7 @@
 			<div class="col-md-4 col-sm-6">
 				<div class="single-services img-cap-effect">
 					<div class="img-box">
-						<img src="/static/images-ship/services/1.jpg" alt="Awesome Image"/>
+						<img src="/static/images-ship/services/vessel-agency.png" style="width=345px; height:220px;" alt="Awesome Image"/>
 						<div class="img-caption">
 							<div class="box-holder">
 							</div>
@@ -199,7 +198,7 @@
 			<div class="col-md-4 col-sm-6">
 				<div class="single-services img-cap-effect">
 					<div class="img-box">
-						<img src="/static/images-ship/services/3.jpg" alt="Awesome Image"/>
+						<img src="/static/images-ship/services/transportation.jpg" style="width=400px; height:220px;" alt="Awesome Image"/>
 						<div class="img-caption">
 							<div class="box-holder">
 							</div>
@@ -244,7 +243,7 @@
 			<div class="col-md-4 col-sm-6">
 				<div class="single-services img-cap-effect">
 					<div class="img-box">
-						<img src="/static/images-ship/services/6.jpg" alt="Awesome Image"/>
+						<img src="/static/images-ship/services/pi.jpg" alt="Awesome Image"/>
 						<div class="img-caption">
 							<div class="box-holder">
 							</div>
