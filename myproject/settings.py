@@ -63,8 +63,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
         'NAME': 'compass',                      # Or path to database file if using sqlite3.
         # The following settings are not used with sqlite3:
-        'USER': 'root',
-        'PASSWORD': 'root',
+        'USER': 'rt8055',
+        'PASSWORD': 'Starthere99%',
         'HOST': '127.0.0.1',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
         'PORT': '3306',                      # Set to empty string for default.
     }
@@ -105,3 +105,10 @@ TEMPLATE_DIRS = (
     TEMPLATE_PATH,
 )
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+EMAIL_HOST = 'smtp.webfaction.com'
+EMAIL_HOST_USER = 'rtxingmail'
+EMAIL_HOST_PASSWORD = 'Reynoldsnext23$'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'

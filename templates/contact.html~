@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from designarc.in/logis-cargo/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Apr 2016 11:41:20 GMT -->
+
 <head>
 	<meta charset="UTF-8">
-	<title>compass-shipping</title>
+	<title>Compass-Shipping</title>
 	<!-- viewport meta -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -40,6 +40,7 @@
 
 
 
+
 </head>
 <body>
 
@@ -48,31 +49,10 @@
 	<div class="thm-container clearfix">
 		<div class="logo pull-left">
 			<a href="/">
-				<img src="/static/images-ship/logo22.png" style="width:80%; height:60%" alt="">
+				<img src="/static/images-ship/logo.png" style="width:80%; height:60%;" alt="">
 			</a>
 		</div>
-		<div class="header-info pull-right">
-			
-			<div class="info-box">
-				<div class="icon-box no-border">
-					<!-- <i class="icon icon-Timer"></i> -->
-				</div>
-				<!-- <div class="text-box">
-					<p class="highlighted">Mon - Sat 9.00 - 18.00</p>
-					<p>Sunday Closed</p>
-				</div> -->
-			</div>
-			<div class="info-box">
-				<div class="icon-box">
-					<i class="icon icon-Phone2"></i>
-				</div>
-				<div class="text-box">
-					<p class="highlighted">Call Us:</p>
-					<p class="phone-number">00968 9142 3785</p>
-				</div>
-			</div>
 		
-		</div>
 	</div>
 </header>
 <!-- End header  -->
@@ -87,52 +67,42 @@
 				</div>
 				<div class="nav-footer">
 					<ul class="nav">
-						<li class="has-submenu">
+						<li>
 					<a href="/">Home</a>
-					<!-- <ul class="submenu">
-						<li><a href="index-2.html">Home Two</a></li>
-						<li><a href="index-3.html">Home Three</a></li>
-						<li><a href="index-4.html">Home Four</a></li>
-					</ul> -->
+					
 				</li>
-						<li class="has-submenu">
+						<li>
 							<a href="/about/">about us</a>
-							<!-- <ul class="submenu">
-								<li><a href="team.html">Our Team</a></li>
-								<li><a href="company-history.html">Company History</a></li>
-								<li><a href="clients.html">Our Clients</a></li>
-								<li><a href="testimonials.html">Testimonials</a></li>
-								<li><a href="career.html">Career</a></li>
-							</ul> -->
+							
 						</li>
-						<li class="has-submenu">
+						<li>
 							<a href="/service/">Services</a>
 							
 						</li>
-						<li class="has-submenu">
+						<li>
 							<a href="/careers/">Careers</a>
 							
 						</li>
-						<li class="has-submenu">
+						<li>
 							<a href="/enquiry/">Enquiry</a>
 							
 						</li>
 						
 						<li><a href="/contact/">contact us</a></li>
 						<li><form method="get" action="/search/" class="search-box-holder">
-					<div class="search-box">
+						<div class="search-box">
 						<div class="form">
-							<input type="text" style="width:300px; height:50px;" name="q" placeholder="&nbsp;&nbsp;&nbsp;Track Your Shipment">
-							<button type="submit"><span>GO</span></button>
+						<input type="text" style="width:200px; height:50px;" name="q" placeholder="&nbsp;&nbsp;&nbsp;Track Your Shipment">
+						<button type="submit"><span>GO</span></button>
 						</div>
 					</div>
 				</form></li>
 					</ul>
 				</div>
 			</div>
-			<div class="free-qoute-button pull-right">				
-				<a href="/login/">Login</a>
-			</div>
+							
+				
+		
 		</div>
 	</div>
 </nav>
@@ -149,24 +119,58 @@
 	</div>
 </section>
 
-<section class="sec-padding contact-page-content">
+
+<section class="sec-padding">
 	<div class="thm-container">
 		<div class="sec-title">
 			<h2><span>Get in touch</span></h2>
 			<p>Fill up below instant messaging programs.</p>
+
 		</div>
+
 		<div class="row">
 			<div class="col-md-7 col-sm-6 col-xs-12 pull-left">
-				<form method="post" class="contact-form contact-page" enctype="multipart/form-data">
+				{% if done %}
+        <p> Your message is successfully. Will get back to you as soon as possible.. Thanks </p>
+					{% else %}
+				<form id="my-contact-form" method="post" class="form-horizontal"  role="form">
                     {% csrf_token %}
-		  
-					<p><input type="text" placeholder="Name" name="name"></p>
-					<p><input type="text" placeholder="Email" name="email"></p>
-					<p><input type="text" placeholder="phone number" name="phone"></p>
-					<p><textarea name="comment" placeholder="Message"></textarea></p>
-					<button type="submit" class="thm-btn">Submit Now</button>
-				</form>
-			</div>
+                    <fieldset>
+                        <div class="form-group">
+                            <div class="col-md-10 col-md-offset-1">
+                                <input id="id_name" name="name" type="text" value="" required="required" pattern="[A-Za-z0-9]{1,}" class="form-control form_input" placeholder="Name">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-10 col-md-offset-1">
+                                <input id="id_email" name="email" type="email" value="" required="required" class="form-control form_input" placeholder="Email">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-10 col-md-offset-1">
+                                <input id="id_phone" name="phone" type="text" pattern="[0-9]{10}"  class="form-control form_input" placeholder="Phone">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-10 col-md-offset-1">
+                                <textarea class="form-control form_textarea" required="required" id="comment" name="comment" placeholder="Enter your message" rows="7"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-12 text-center">
+                                <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+
+{% endif %}			
+</div>
+
 			<div class="col-md-4 col-sm-6 col-xs-12 pull-right">
 				<div class="contact-info">
 					<ul>
@@ -199,11 +203,7 @@
 				</div>
 			</div>
 		</div>
-		<!-- <div class="row">
-			<div class="col-md-12">				
-				<div class="google-map" id="contact-page-google-map" data-map-lat="-37.812802" data-map-lng="144.956981" data-map-zoom="10" data-map-title="Envato HQ"></div>
-			</div>
-		</div> -->
+		
 	</div>
 </section>
  

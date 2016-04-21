@@ -24,7 +24,7 @@ class Enquiry(models.Model):
     organisation = models.CharField(max_length=40)
     designation = models.CharField(max_length=40)
     contact_number = models.CharField(max_length=55)
-    email = models.CharField(max_length=50)
+    email = models.EmailField(max_length=50)
     city = models.CharField(max_length=50)
     country = models.CharField(max_length=80)
     enquiry = models.CharField(max_length=255, null=True, blank=True)
@@ -38,7 +38,7 @@ class EnquiryAdmin(admin.ModelAdmin):
 class Message(models.Model):
     name = models.CharField(max_length=40, null=True, blank=True)
     email = models.CharField(max_length=40, null=True, blank=True)
-    phone = models.IntegerField(null=True, blank=True)
+    phone = models.CharFieldField(max_length=40, null=True, blank=True)
     comment = models.TextField(null=True, blank=True)
 
 class Track(models.Model):

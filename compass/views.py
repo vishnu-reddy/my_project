@@ -13,6 +13,8 @@ from django.template.loader import render_to_string
 from django.template import RequestContext
 from django.contrib.auth import authenticate, login
 from django.db.models import Q
+from smtplib import SMTP
+from django.core.mail import send_mail
 
 @csrf_protect
 def register(request):
@@ -42,30 +44,42 @@ def logout_page(request):
 
 def enquiry(request):
     context = RequestContext(request)
+    done = False
     if request.method == "POST":
 	enquiry_form = EnquiryForm(data=request.POST)
         if enquiry_form.is_valid():
             enquiry = enquiry_form.save()
+            done = True
+	    '''from_mail = request.POST['email']
+    	    to_mail = ["vishnu@delevere.com"]
+    	    message =  request.POST['enquiry']
+	    send_mail("Compass-ship Enquiry", message, from_mail, to_mail)'''
 	else:
             print enquiry_form    
     else:
         enquiry_form = EnquiryForm()
     return render_to_response('enquiry.html',
-     {'enquiry_form': enquiry_form}, context)
+     {'enquiry_form': enquiry_form, 'done': done}, context)
 
 
 def message(request):
     context = RequestContext(request)
+    done = False
     if request.method == "POST":
 	message_form = MessageForm(data=request.POST)
         if message_form.is_valid():
             message = message_form.save()
+	    done = True
 	else:
-            print "hi"   
+            print message_form.errors   
     else:
         message_form = MessageForm()
+        print "hi"
     return render_to_response('contact.html',
-     {'message_form': message_form}, context)
+     {'message_form': message_form, 'done': done}, context)
+
+
+
 
 
 
@@ -126,4 +140,10 @@ def pi(request):
 
 def ship(request):
     return render(request, 'ship.html', {})
+
+def e_success(request):
+    return render(request, 'enquiry_success.html', {})
+
+def m_success(request):
+    return render(request, 'message_success.html', {})
 
